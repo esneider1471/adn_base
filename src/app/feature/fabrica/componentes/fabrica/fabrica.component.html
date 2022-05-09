@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+     <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+   
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+            Lote
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+            <a class="dropdown-item" id="linkCrearLote" routerLink="./crear/lote" routerLinkActive="active">Crear Lote</a>
+            <a class="dropdown-item" id="linkListarLote" routerLink="./listar/lote" routerLinkActive="active">Listar Lotes</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Operación
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" id="linkCrearOperacion" routerLink="./crear/operacion" routerLinkActive="active">Crear Operación</a>
+              <a class="dropdown-item"id="linkListarOperacion" routerLink="./listar/operacion" routerLinkActive="active">Listar Operaciones</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Operario
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" id="linkCrearOperario" routerLink="./crear/operario" routerLinkActive="active">Crear Operario</a>
+              <a class="dropdown-item" id="linkListarOperario" routerLink="./listar/operario" routerLinkActive="active">Listar Operarios</a>
+            </div>
+          </li>
+      </ul>
+    </div>
+  </nav>
+<router-outlet></router-outlet>

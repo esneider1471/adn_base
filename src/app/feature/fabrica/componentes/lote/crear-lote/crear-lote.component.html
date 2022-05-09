@@ -1,0 +1,55 @@
+<p class="titulo margin-top"><b>Crearción de Lotes</b></p>
+
+<div class="col-md-12">
+    <div class="col-md-6"  style="float: left;">
+        <form [formGroup]="loteForm" class="margin-form">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <label>Referencia</label>
+                    <input validar type="text" id="id" name="id" placeholder="Referencia lote"
+                        class="form-control" formControlName="id">
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>cantidad</label>
+                    <input validar type="number" id="cantidad" name="cantidad" placeholder="Cantidad lote" class="form-control"
+                        formControlName="cantidad">
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>Fecha Inicio</label>
+                    <input validar type="date" id="fechaInicio" name="fechaInicio" placeholder="fecha inicio"
+                        class="form-control" formControlName="fechaInicio">
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>Fecha Fin</label>
+                    <input validar type="date" id="fechaFin" name="fechaFin" placeholder="Fecha fin" class="form-control"
+                        formControlName="fechaFin">
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-sm-12">
+                    <label>Foto</label>
+                    <input validar type="text" id="foto" name="foto" placeholder="url foto"
+                        class="form-control" formControlName="foto">
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <button [disabled]="loteForm.controls.id.errors || loteForm.controls.cantidad.errors
+                    || loteForm.controls.fechaInicio.errors || loteForm.controls.fechaFin.errors || loteForm.controls.foto.errors" class="btn btn-primary form-control"  (click)="crearLote()">Crear</button>
+                </div>
+              </div>
+        
+        </form>
+    </div>
+    <div class="col-md-6" style="float: right;text-align: center;">
+        <app-foto [foto]="loteForm.controls.foto.value"></app-foto>
+    </div>
+</div>
+
+

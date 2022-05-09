@@ -1,0 +1,21 @@
+<p class="titulo margin-top"><b>Listado de Operarios</b></p>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Identificacion</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Dirección</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let operario of listaOperarios">
+            <td>{{operario.id}}</td>
+            <td>{{operario.nombre}}</td>
+            <td>{{operario.telefono}}</td>
+            <td>{{operario.direccion}}</td>
+        </tbody>
+      </table>
+</div>

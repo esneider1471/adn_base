@@ -1,0 +1,19 @@
+<p class="titulo margin-top"><b>Listado de Operaciones</b></p>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Codigo Operacion</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Valor opracion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let operacion of listaOperaciones">
+            <td>{{operacion.id}}</td>
+            <td>{{operacion.nombreOperacion}}</td>
+            <td>{{operacion.valorOperacionUnidad}}</td>
+        </tbody>
+      </table>
+</div>

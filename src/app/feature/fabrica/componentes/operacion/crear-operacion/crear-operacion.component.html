@@ -1,0 +1,32 @@
+<p class="titulo margin-top"><b>Crearción de Operación</b></p>
+
+<form [formGroup]="operacionForm" class="margin-form">
+    <div class="row ">
+        <div class="col-sm-4">
+            <label>Codigo operación</label>
+            <input validar type="text" id="id" name="id" placeholder="Codigo operacion"
+                class="form-control" formControlName="id">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <label>Nombre operación</label>
+            <input validar type="text" id="nombreOperacion" name="nombreOperacion" placeholder="Nombre operacion" class="form-control"
+                formControlName="nombreOperacion">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <label>Valor de Operacion por unidad</label>
+            <input validar type="number" id="valorOperacionUnidad" name="valorOperacionUnidad" placeholder="100"
+                class="form-control" formControlName="valorOperacionUnidad">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <button [disabled]="operacionForm.controls.id.errors || operacionForm.controls.nombreOperacion.errors
+            || operacionForm.controls.valorOperacionUnidad.errors" class="btn btn-primary form-control"  (click)="crearOperacion()">Crear</button>
+        </div>
+      </div>
+
+</form>

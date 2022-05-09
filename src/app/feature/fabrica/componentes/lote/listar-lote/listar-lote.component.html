@@ -1,0 +1,22 @@
+<p class="titulo margin-top"><b>Listado de Lotes</b></p>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Referencia</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Fecha Inicio</th>
+            <th scope="col">Fecha Fin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lote of listaLotes">
+            <td>{{lote.id}}</td>
+            <td>{{lote.cantidad}}</td>
+            <td>{{lote.fechaInicio}}</td>
+            <td>{{lote.fechaFin}}</td>
+          
+        </tbody>
+      </table>
+</div>

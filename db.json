@@ -1,0 +1,49 @@
+{
+  "lote": [
+    {
+      "id": 1,
+      "referencia": "RFL01",
+      "cantidad": "50",
+      "fechaInicio": "10/02/2022",
+      "fechaFin": "10/03/2022",
+      "foto": "https://http2.mlstatic.com/D_NQ_NP_924043-MCO31047123874_062019-W.jpg"
+    },
+    {
+      "id": "rf04",
+      "cantidad": 23,
+      "fechaInicio": "2022-05-18",
+      "fechaFin": "2022-05-03",
+      "foto": "https://cuerosvelezco.vteximg.com.br/arquivos/ids/199143-450-675/1026466-28-02-Camisa-para-hombre.jpg?v=637425532739670000"
+    }
+  ],
+  "operacion": [
+    {
+      "id": 1,
+      "nombreOperacion": "ruedo",
+      "valorOperacionUnidad": 100
+    }
+  ],
+  "operario": [
+    {
+      "id": 1,
+      "nombre": "vanesa",
+      "telefono": "4445588",
+      "direccion": "cr 89 #20 66"
+    },
+    {
+      "id": "10203040",
+      "nombre": "brayan",
+      "telefono": "2229966",
+      "direccion": "cra 22"
+    }
+  ],
+  "asignacionLote": [
+    {}
+  ],
+  "login": [
+    {
+      "email": "test@test.com",
+      "password": "123"
+    }
+  ]
+}

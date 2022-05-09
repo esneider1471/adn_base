@@ -1,0 +1,39 @@
+<p class="titulo margin-top"><b>Crearción de Operario</b></p>
+
+<form [formGroup]="operarioForm" class="margin-form">
+    <div class="row ">
+        <div class="col-sm-4">
+            <label>Identificacion</label>
+            <input validar type="text" id="id" name="id" placeholder="Identificacion"
+                class="form-control" formControlName="id">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <label>Nombre Operario</label>
+            <input validar type="text" id="nombre" name="nombre" placeholder="Nombre operario" class="form-control"
+                formControlName="nombre">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <label>Telefono</label>
+            <input validar type="tel" id="telefono" name="Telefono" placeholder="777 88 88"
+                class="form-control" formControlName="telefono">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <label>Dirección</label>
+            <input validar type="text" id="direccion" name="Direccion" placeholder="cra 20 # 56 99"
+                class="form-control" formControlName="direccion">
+        </div>
+    </div>
+    <div class="row margin-top">
+        <div class="col-sm-4">
+            <button [disabled]="operarioForm.controls.id.errors || operarioForm.controls.nombre.errors || operarioForm.controls.telefono.errors
+            || operarioForm.controls.direccion.errors" class="btn btn-primary form-control"  (click)="crearOperario()">Crear</button>
+        </div>
+      </div>
+
+</form>

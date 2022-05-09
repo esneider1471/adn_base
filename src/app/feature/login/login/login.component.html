@@ -1,0 +1,24 @@
+<div class="col-md-12">
+    <form [formGroup]="loginForm" class="margin-form form" >
+        <div class="row">
+            <div class="col-sm-12">
+                <label>Email</label>
+                <input validar type="text" id="email" name="email" placeholder="Email" class="form-control"
+                    formControlName="email">
+            </div>
+        </div>
+        <div class="row margin-top">
+            <div class="col-sm-12">
+                <label>Password</label>
+                <input validar type="password" id="password" name="password" placeholder="Password" class="form-control"
+                    formControlName="password">
+            </div>
+        </div>
+        <div class="row margin-top">
+            <div class="col-sm-12">
+                <button [disabled]="loginForm.controls.email.errors || loginForm.controls.password.errors"
+                    class="btn btn-primary form-control" (click)="consultarUsuario()">Log In</button>
+            </div>
+        </div>
+    </form>
+</div>
