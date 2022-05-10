@@ -28,8 +28,9 @@ pipeline {
 
     stage('Static Code Analysis') {
       steps{
-            sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:facturacionconfecciones-brayan.castaneda', 
-          sonarName:'CeibaADN-facturacionconfecciones(brayan.castaneda)', 
+           echo '------------>Analisar código estático<------------'
+          sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:facturacionconfecciones-brayan.castaneda', 
+          sonarName:'"CeibaADN-facturacionconfecciones(brayan.castaneda)"', 
           sonarPathProperties:'./sonar-project.properties')
       }
     } 
