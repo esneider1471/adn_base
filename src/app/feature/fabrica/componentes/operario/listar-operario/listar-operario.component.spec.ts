@@ -1,4 +1,8 @@
+import { CommonModule } from '@angular/common';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
 
 import { ListarOperarioComponent } from './listar-operario.component';
 
@@ -8,7 +12,14 @@ describe('ListarOperarioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListarOperarioComponent ]
+      declarations: [ ListarOperarioComponent ],
+      imports:[
+        CommonModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientTestingModule
+      ],
+      providers:[OperarioService]
     })
     .compileComponents();
   });

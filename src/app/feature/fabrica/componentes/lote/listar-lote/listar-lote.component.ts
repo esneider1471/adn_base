@@ -9,7 +9,7 @@ import { LoteService } from '@fabrica/shared/service/lote/lote.service';
 })
 export class ListarLoteComponent implements OnInit {
 
-  listaLotes: Lote[] = [];
+  public listaLotes: Lote[] = [];
 
   constructor(private loteService: LoteService) { }
 
@@ -17,9 +17,10 @@ export class ListarLoteComponent implements OnInit {
     this.listarLotes();
   }
 
-  private listarLotes() {
-    this.loteService.listarLotes().subscribe(resp =>
-      this.listaLotes = resp
+   listarLotes() {
+    this.loteService.listarLotes().subscribe(lotes => {
+      this.listaLotes = lotes
+    }
     );
   }
 }

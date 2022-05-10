@@ -14,6 +14,20 @@
       "fechaInicio": "2022-05-18",
       "fechaFin": "2022-05-03",
       "foto": "https://cuerosvelezco.vteximg.com.br/arquivos/ids/199143-450-675/1026466-28-02-Camisa-para-hombre.jpg?v=637425532739670000"
+    },
+    {
+      "id": "rf08",
+      "cantidad": 36,
+      "fechaInicio": "2022-05-06",
+      "fechaFin": "2022-05-13",
+      "foto": "https://seguridadindustrialymedica.com/wp-content/uploads/2020/01/camisa-oxford-azul.jpg"
+    },
+    {
+      "id": "rf03",
+      "cantidad": 85,
+      "fechaInicio": "2022-05-12",
+      "fechaFin": "2022-05-20",
+      "foto": "https://seguridadindustrialymedica.com/wp-content/uploads/2020/01/camisa-oxford-azul.jpg"
     }
   ],
   "operacion": [
