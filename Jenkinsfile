@@ -4,10 +4,7 @@ pipeline {
   }
 
   stages {
-
-    /*   stage('Clean Workspace') {
-      cleanWs()
-      } */
+    
     stage ('checkout') {
       steps {
         checkout scm
@@ -24,14 +21,9 @@ pipeline {
     stage('Unit Test') {
       steps {
         echo '------------>Testing<------------'
-        sh 'npm run test'
+        sh 'npm run test --watch=false --browsers ChromeHeadless'
       }
     }
-    stage('Test end-to-end') {
-      steps {
-        echo '------------>Testing Protractor<------------'
-        sh 'npm run e2e'
-      }
-    }
+    
   }
 }
