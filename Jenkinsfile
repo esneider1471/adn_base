@@ -1,34 +1,35 @@
-pipeline{
-   agent {
+pipeline {
+  agent {
     label 'Slave_Induccion'
   }
 
-  stages{
-      stage('Clean Workspace'){
-    cleanWs()
-  }
-    stage ('checkout'){
-      steps{
+  stages {
+
+    /*   stage('Clean Workspace') {
+      cleanWs()
+      } */
+    stage ('checkout') {
+      steps {
         checkout scm
       }
     }
 
     stage('NPM Install') {
       steps {
-        echo "------------>Installing<------------"
+        echo '------------>Installing<------------'
         sh 'npm install'
       }
     }
 
     stage('Unit Test') {
       steps {
-        echo "------------>Testing<------------"
+        echo '------------>Testing<------------'
         sh 'npm run test'
       }
     }
     stage('Test end-to-end') {
-      steps{
-        echo "------------>Testing Protractor<------------"
+      steps {
+        echo '------------>Testing Protractor<------------'
         sh 'npm run e2e'
       }
     }
