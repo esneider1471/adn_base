@@ -1,3 +1,4 @@
+@Library('ceiba-jenkins-library') _
 pipeline {
   agent {
     label 'Slave_Induccion'
@@ -24,6 +25,33 @@ pipeline {
         sh 'npm run test -- --watch=false --browsers ChromeHeadless'
       }
     }
-    
+
+    stage('Static Code Analysis') {
+      steps{
+            sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:facturacionconfecciones-brayan.castaneda', 
+          sonarName:'CeibaADN-facturacionconfecciones(brayan.castaneda)', 
+          sonarPathProperties:'./sonar-project.properties')
+      }
+    } 
+
+    stage('Build') {
+      steps {
+        echo "------------>Building<------------"
+        sh 'npm run build'
+      }
+    }
+  }
+
+  post {
+    failure {
+    echo 'This will run only if failed'
+    mail (to: 'brayan.castaneda@ceiba.com.co',subject: "Failed Pipeline:${currentBuild.fullDisplayName}",body: "Something is wrong with ${env.BUILD_URL}")
+    }
+
+    success {
+      echo 'This will run only if successful'
+      junit 'build/test-results/test/*.xml' //RUTA RELATIVA DE LOS ARCHIVOS .XML
+    }
+
   }
 }
