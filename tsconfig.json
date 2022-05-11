@@ -40,7 +40,7 @@
         "src/app/feature/fabrica/*"
       ],
       "@login/*": [
-        "src/app/feature/login/*"
+        "src/app/core/components/login/*"
       ]
     }
   },

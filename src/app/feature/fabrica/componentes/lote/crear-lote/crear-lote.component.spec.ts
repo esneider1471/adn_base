@@ -53,10 +53,10 @@ describe('CrearLoteComponent', () => {
     component.loteForm.controls.fechaInicio.setValue('10/02/2022');
     component.loteForm.controls.fechaFin.setValue('10/03/2022');
     component.loteForm.controls.foto.setValue('img1');
-    expect(component.loteForm.valid).toBeTruthy(); 
+    expect(component.loteForm.valid).toBeTruthy();
     component.crearLote();
     expect(loteService.crearLote).toHaveBeenCalled();
-   /*  expect(component.loteForm.value).toEqual(lote); */
+    /*  expect(component.loteForm.value).toEqual(lote); */
   });
 
 });

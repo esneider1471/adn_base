@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-fabrica',
   templateUrl: './fabrica.component.html',
   styleUrls: ['./fabrica.component.scss']
 })
-export class FabricaComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class FabricaComponent{
 
 }

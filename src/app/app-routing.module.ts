@@ -6,7 +6,8 @@ import { HomeComponent } from '@home/home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/fabrica', pathMatch: 'full' },
-  { path: '', loadChildren: () => import('./feature/feature.module').then(mod => mod.FeatureModule) },
+  { path: 'login', loadChildren: () => import('@core/components/login/login.module').then(mod => mod.LoginModule) },
+  { path: 'fabrica', loadChildren: () => import('@fabrica/fabrica.module').then(mod => mod.FabricaModule) },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
 

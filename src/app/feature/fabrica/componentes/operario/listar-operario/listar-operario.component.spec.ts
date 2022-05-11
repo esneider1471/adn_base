@@ -12,16 +12,16 @@ describe('ListarOperarioComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ListarOperarioComponent ],
-      imports:[
+      declarations: [ListarOperarioComponent],
+      imports: [
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
         HttpClientTestingModule
       ],
-      providers:[OperarioService]
+      providers: [OperarioService]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

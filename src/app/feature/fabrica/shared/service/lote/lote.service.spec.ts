@@ -5,13 +5,13 @@ import { LoteService } from './lote.service';
 
 describe('LoteService', () => {
   let service: LoteService;
- let httpClientSpy:{post: jasmine.Spy};
+  let httpClientSpy: { post: jasmine.Spy };
 
   beforeEach(() => {
-   httpClientSpy = jasmine.createSpyObj('HttpClient', ['post']);
-   service = new LoteService(httpClientSpy as  any);
+    httpClientSpy = jasmine.createSpyObj('HttpClient', ['post']);
+    service = new LoteService(httpClientSpy as any);
   });
- 
+
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
@@ -22,11 +22,10 @@ describe('LoteService', () => {
 
     httpClientSpy.post.and.returnValue(of(ObjLoteRequest));
 
-    service.crearLote(ObjLote).subscribe(respuesta =>{
+    service.crearLote(ObjLote).subscribe(respuesta => {
       expect(respuesta).toEqual(ObjLote);
       done();
-    })
-   
+    });
   });
 
 });

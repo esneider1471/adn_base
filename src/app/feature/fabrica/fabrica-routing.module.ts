@@ -13,6 +13,7 @@ const routes: Routes = [
   {
     path: '',
     component: FabricaComponent,
+    canActivate: [SecurityGuard],
     children: [
       {
         path: 'crear/lote',

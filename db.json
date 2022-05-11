@@ -28,6 +28,13 @@
       "fechaInicio": "2022-05-12",
       "fechaFin": "2022-05-20",
       "foto": "https://seguridadindustrialymedica.com/wp-content/uploads/2020/01/camisa-oxford-azul.jpg"
+    },
+    {
+      "id": "rf85",
+      "cantidad": 25,
+      "fechaInicio": "2022-05-12",
+      "fechaFin": "2022-05-19",
+      "foto": "https://seguridadindustrialymedica.com/wp-content/uploads/2020/01/camisa-oxford-azul.jpg"
     }
   ],
   "operacion": [

@@ -17,10 +17,11 @@ export class ListarLoteComponent implements OnInit {
     this.listarLotes();
   }
 
-   listarLotes() {
+  listarLotes() {
     this.loteService.listarLotes().subscribe(lotes => {
-      this.listaLotes = lotes
+      this.listaLotes = lotes;
     }
     );
   }
+
 }

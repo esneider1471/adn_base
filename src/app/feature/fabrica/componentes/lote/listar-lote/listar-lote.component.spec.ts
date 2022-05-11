@@ -12,19 +12,19 @@ describe('ListarLoteComponent', () => {
   let fixture: ComponentFixture<ListarLoteComponent>;
   let loteService: LoteService;
 
-  const lotes: Lote[] = [ new Lote('rf01',220 ,'10/02/2022','10/03/2022' , 'img1'), 
-                               new Lote('rf02',220 ,'2022-05-18','2022-05-03' , 'img2')];
+  const lotes: Lote[] = [new Lote('rf01', 220, '10/02/2022', '10/03/2022', 'img1'),
+  new Lote('rf02', 220, '2022-05-18', '2022-05-03', 'img2')];
 
-  beforeEach(waitForAsync( () => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListarLoteComponent ],
-      imports:[
+      declarations: [ListarLoteComponent],
+      imports: [
         CommonModule,
         HttpClientTestingModule
       ],
-      providers:[LoteService]
+      providers: [LoteService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -39,7 +39,7 @@ describe('ListarLoteComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    
+
   });
 
   it('consultar lotes', () => {

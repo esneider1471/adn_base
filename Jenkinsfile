@@ -6,6 +6,13 @@ pipeline {
 
   stages {
 
+    stage ('clean'){
+      steps{
+        echo '------------>clean<------------'
+        sh 'npm cache clean --force'
+      }
+    }
+
     stage ('checkout') {
       steps {
         checkout scm

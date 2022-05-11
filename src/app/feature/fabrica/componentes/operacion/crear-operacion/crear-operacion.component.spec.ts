@@ -13,13 +13,13 @@ describe('CrearOperacionComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [CrearOperacionComponent],
-      imports:[
+      imports: [
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
         HttpClientTestingModule
       ],
-      providers:[OperacionService]
+      providers: [OperacionService]
     })
       .compileComponents();
   }));

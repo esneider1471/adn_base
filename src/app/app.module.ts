@@ -8,7 +8,8 @@ import { ProductoModule } from '@producto/producto.module';
 import { CoreModule } from '@core/core.module';
 import { CookieService } from 'ngx-cookie-service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FeatureModule } from './feature/feature.module';
+import { LoginModule } from '@core/components/login/login.module';
+import { FabricaModule } from '@fabrica/fabrica.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FeatureModule } from './feature/feature.module';
     ProductoModule,
     CoreModule,
     BrowserAnimationsModule,
-    FeatureModule
+    FabricaModule,
+    LoginModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

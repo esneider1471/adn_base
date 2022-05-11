@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { MenuItem } from '@core/modelo/menu-item';
+import { Component, OnInit } from '@angular/core';
+import { Login } from '@core/components/login/shared/model/login';
+import { LoginService } from '@core/components/login/shared/services/login.service';
 
 
 @Component({
@@ -7,10 +8,20 @@ import { MenuItem } from '@core/modelo/menu-item';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'app-base';
-  public companies: MenuItem[] = [
-    { url: '/home', nombre: 'home' },
-    { url: '/producto', nombre: 'producto' }
-  ];
+export class AppComponent implements OnInit {
+
+  isLogin: Login;
+
+  constructor(private login: LoginService) { }
+
+  ngOnInit() {
+    this.login.isLogin$.subscribe(respuesta => {
+      this.isLogin = respuesta;
+    });
+  }
+
+  logOut() {
+    this.login.logOut();
+  }
+
 }
