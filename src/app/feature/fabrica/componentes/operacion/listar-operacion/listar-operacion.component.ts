@@ -19,7 +19,7 @@ export class ListarOperacionComponent implements OnInit {
   }
 
   private listarOperaciones() {
-    this.operacionService.listarOperaciones().subscribe( resp => {
+    this.operacionService.listarOperaciones().subscribe(resp => {
       this.listaOperaciones = resp;
     });
   }

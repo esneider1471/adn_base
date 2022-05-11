@@ -10,6 +10,7 @@ import { LoginService } from '@core/components/login/shared/services/login.servi
 })
 export class AppComponent implements OnInit {
 
+  title = 'app-base';
   isLogin: Login;
 
   constructor(private login: LoginService) { }
