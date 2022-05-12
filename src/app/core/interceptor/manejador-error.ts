@@ -1,11 +1,12 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorHandler, Injectable } from '@angular/core';
+import { MensajeService } from '@core/services/mensaje.service';
 import { environment } from '../../../environments/environment';
 import { HTTP_ERRORES_CODIGO } from './http-codigo-error';
 
 @Injectable()
 export class ManejadorError implements ErrorHandler {
-  constructor() {}
+  constructor(private mensajeService: MensajeService) { }
 
   handleError(error: string | Error): void {
     const mensajeError = this.mensajePorDefecto(error);
@@ -32,6 +33,7 @@ export class ManejadorError implements ErrorHandler {
     };
     if (!environment.production) {
       window.console.error('Error inesperado:\n', respuesta);
+      this.mensajeService.mostrarMensaje({ titulo: 'A Ocurrido un Error!', mensaje: `${mensaje}` });
     }
   }
 

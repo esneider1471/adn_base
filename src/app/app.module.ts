@@ -10,6 +10,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from '@core/components/login/login.module';
 import { FabricaModule } from '@fabrica/fabrica.module';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FabricaModule } from '@fabrica/fabrica.module';
     CoreModule,
     BrowserAnimationsModule,
     FabricaModule,
-    LoginModule
+    LoginModule,
+    MatDialogModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],
