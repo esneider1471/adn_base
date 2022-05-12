@@ -1,6 +1,7 @@
-export interface Pago{
-    operario:string;
-    referenciaLote:string;
-    operacion:string;
-    valorOperacion:number;
+export interface Pago {
+    operario: string;
+    referenciaLote: string;
+    operacion: string;
+    cantidadPrendas: number;
+    valorOperacion: number;
 }

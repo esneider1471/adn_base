@@ -3,27 +3,28 @@
 <div class="row margin-top">
 <div class="col-md-12" style="margin-left: 10px;">
     <input type="text" style="width: 200px;float: left;" class="form-control" placeholder="Id Operario" [(ngModel)]="idOperario">
-    <button [disabled]="idOperario == ''" class="form-control btn btn-primary" style="width: 100px;float: left;" >Consultar</button>
+    <button [disabled]="!idOperario" (click)="consultarPagoOperario()" class="form-control btn btn-primary" style="width: 100px;float: left;" >Consultar</button>
 </div>
 </div>
 <div class="margin-top">
     <table class="table table-hover" aria-label="listaPagos">
         <thead>
           <tr>
-            <th scope="col">Referencia Asignacion</th>
-            <th scope="col">Id Operario</th>
+            <th scope="col">Operario</th>
             <th scope="col">ReferenciaLote</th>
-            <th scope="col">Cantidad Prendas</th>
             <th scope="col">Operación</th>
+            <th scope="col">Cantidad Prendas</th>
+            <th scope="col">Valor Operación</th>
           </tr>
         </thead>
-     <!--    <tbody>
-          <tr *ngFor="let asignacion of listaAsignacionLotes">
-            <td>{{asignacion.id}}</td>
-            <td>{{asignacion.operarioId}}</td>
-            <td>{{asignacion.referenciaLote}}</td>
-            <td>{{asignacion.cantidadPrendas}}</td>
-            <td>{{asignacion.operacionId}}</td>
-        </tbody> -->
+        <tbody>
+          <tr *ngFor="let pago of pagoOperario">
+            <td>{{pago.operario}}</td>
+            <td>{{pago.referenciaLote}}</td>
+            <td>{{pago.operacion}}</td>
+            <td>{{pago.cantidadPrendas}}</td>
+            <td>{{pago.valorOperacion}}</td>
+        </tbody>
       </table>
+      <div style="text-align: end;margin-right: 20px;"><strong>Total Pago: </strong><span>{{totalPagar}}</span></div>
 </div>

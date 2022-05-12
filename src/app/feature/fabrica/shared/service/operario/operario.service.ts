@@ -15,4 +15,8 @@ export class OperarioService {
   public listarOperarios() {
     return this.http.get<Operario[]>(`${environment.endpoint}/operario`);
   }
+
+  public async consultarOperarioId(operarioId: string) {
+    return this.http.get<Operario>(`${environment.endpoint}/operario?id=${operarioId}`).toPromise();
+  }
 }

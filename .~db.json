@@ -72,10 +72,10 @@
       "operarioId": "102614544"
     },
     {
-      "id": 5,
-      "referenciaLote": "rf03",
+      "id": 3,
+      "referenciaLote": "rf04",
       "cantidadPrendas": 12,
-      "operacionId": 1,
+      "operacionId": "op02",
       "operarioId": "102614544"
     }
   ],

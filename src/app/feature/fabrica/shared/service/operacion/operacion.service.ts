@@ -15,4 +15,8 @@ export class OperacionService {
   public listarOperaciones() {
     return this.http.get<Operacion[]>(`${environment.endpoint}/operacion`);
   }
+
+  public consultarOperacionId(operacionId: string) {
+    return this.http.get<Operacion[]>(`${environment.endpoint}/operacion?id=${operacionId}`).toPromise();
+  }
 }

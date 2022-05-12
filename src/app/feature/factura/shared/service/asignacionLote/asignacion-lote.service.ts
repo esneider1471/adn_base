@@ -15,4 +15,8 @@ export class AsignacionLoteService {
   public listarAsignacionLotes() {
     return this.http.get<AsignacionLote[]>(`${environment.endpoint}/asignacionLote`);
   }
+
+  public consultarAsignacionOperarioId(operarioId: string) {
+    return this.http.get<AsignacionLote[]>(`${environment.endpoint}/asignacionLote?operarioId=${operarioId}`).toPromise();
+  }
 }
