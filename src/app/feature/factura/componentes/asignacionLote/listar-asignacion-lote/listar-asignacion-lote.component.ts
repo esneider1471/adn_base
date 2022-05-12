@@ -9,15 +9,15 @@ import { AsignacionLoteService } from '@factura/shared/service/asignacionLote/as
 })
 export class ListarAsignacionLoteComponent implements OnInit {
 
-  public listaAsignacionLotes: AsignacionLote[];
+  public listaAsignacionLotes: AsignacionLote[] = [];
 
   constructor(private asignacionLoteService: AsignacionLoteService) { }
 
   ngOnInit() {
-    this.listarLotes();
+    this.listarAsignacionLotes();
   }
 
-  listarLotes() {
+  listarAsignacionLotes() {
     this.asignacionLoteService.listarAsignacionLotes().subscribe(asignacionLotes =>
       this.listaAsignacionLotes = asignacionLotes
     );

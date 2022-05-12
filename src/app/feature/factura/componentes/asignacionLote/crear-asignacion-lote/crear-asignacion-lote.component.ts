@@ -28,13 +28,13 @@ export class CrearAsignacionLoteComponent implements OnInit {
   ngOnInit() {
     this.construirFormularioLote();
 
-    this.loteService.listarLotes().subscribe(lotes => {
-      this.listaLotes = lotes;
-    });
+    this.loteService.listarLotes().subscribe(lotes =>
+      this.listaLotes = lotes
+    );
 
-    this.operacionService.listarOperaciones().subscribe(operaciones => {
-      this.listaOperaciones = operaciones;
-    });
+    this.operacionService.listarOperaciones().subscribe(operaciones =>
+      this.listaOperaciones = operaciones
+    );
 
     this.operarioSnervice.listarOperarios().subscribe(resp =>
       this.listaOperarios = resp
