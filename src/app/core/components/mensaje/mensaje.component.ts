@@ -19,9 +19,9 @@ export class MensajeComponent implements OnInit {
   }
 
   cerrarMensaje() {
-    this.ngZone.run(() => {
-      this.mensajeDialog.close(true);
-    });
+    this.ngZone.run(() =>
+      this.mensajeDialog.close(true)
+    );
   }
 
 }

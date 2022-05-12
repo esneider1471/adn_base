@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
   constructor(private login: LoginService) { }
 
   ngOnInit() {
-    this.login.isLogin$.subscribe(respuesta => {
-      this.isLogin = respuesta;
-    });
+    this.login.isLogin$.subscribe(respuesta =>
+      this.isLogin = respuesta
+    );
   }
 
   logOut() {
