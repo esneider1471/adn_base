@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModule } from '@core/components/login/login.module';
 import { FabricaModule } from '@fabrica/fabrica.module';
 import {MatDialogModule} from '@angular/material/dialog';
+import { FacturaModule } from '@factura/factura.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     BrowserAnimationsModule,
     FabricaModule,
     LoginModule,
-    MatDialogModule
+    MatDialogModule,
+    FacturaModule
   ],
   providers: [CookieService],
     bootstrap: [AppComponent],

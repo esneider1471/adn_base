@@ -41,6 +41,9 @@
       ],
       "@login/*": [
         "src/app/core/components/login/*"
+      ],
+      "@factura/*": [
+        "src/app/feature/factura/*"
       ]
     }
   },

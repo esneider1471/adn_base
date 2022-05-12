@@ -1,0 +1,29 @@
+<p class="titulo margin-top"><strong>Pago de Asignación Lotes</strong></p>
+
+<div class="row margin-top">
+<div class="col-md-12" style="margin-left: 10px;">
+    <input type="text" style="width: 200px;float: left;" class="form-control" placeholder="Id Operario" [(ngModel)]="idOperario">
+    <button [disabled]="idOperario == ''" class="form-control btn btn-primary" style="width: 100px;float: left;" >Consultar</button>
+</div>
+</div>
+<div class="margin-top">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Referencia Asignacion</th>
+            <th scope="col">Id Operario</th>
+            <th scope="col">ReferenciaLote</th>
+            <th scope="col">Cantidad Prendas</th>
+            <th scope="col">Operación</th>
+          </tr>
+        </thead>
+     <!--    <tbody>
+          <tr *ngFor="let asignacion of listaAsignacionLotes">
+            <td>{{asignacion.id}}</td>
+            <td>{{asignacion.operarioId}}</td>
+            <td>{{asignacion.referenciaLote}}</td>
+            <td>{{asignacion.cantidadPrendas}}</td>
+            <td>{{asignacion.operacionId}}</td>
+        </tbody> -->
+      </table>
+</div>

@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/fabrica', pathMatch: 'full' },
   { path: 'login', loadChildren: () => import('@core/components/login/login.module').then(mod => mod.LoginModule) },
   { path: 'fabrica', loadChildren: () => import('@fabrica/fabrica.module').then(mod => mod.FabricaModule) },
+  { path: 'factura', loadChildren: () => import('@factura/factura.module').then(mod => mod.FacturaModule) },
   { path: 'home', component: HomeComponent, canActivate: [SecurityGuard]  },
   { path: 'producto', loadChildren: () => import('@producto/producto.module').then(mod => mod.ProductoModule) },
 

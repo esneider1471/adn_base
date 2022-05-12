@@ -64,11 +64,18 @@
     }
   ],
   "asignacionLote": [
-       {
+    {
       "id": 4,
       "referenciaLote": "rf08",
       "cantidadPrendas": 14,
       "operacionId": "op02",
+      "operarioId": "102614544"
+    },
+    {
+      "id": 5,
+      "referenciaLote": "rf03",
+      "cantidadPrendas": 12,
+      "operacionId": 1,
       "operarioId": "102614544"
     }
   ],

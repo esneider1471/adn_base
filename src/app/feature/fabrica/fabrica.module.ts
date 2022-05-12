@@ -11,6 +11,7 @@ import { OperarioService } from './shared/service/operario/operario.service';
 import { ListarLoteComponent } from './componentes/lote/listar-lote/listar-lote.component';
 import { ListarOperacionComponent } from './componentes/operacion/listar-operacion/listar-operacion.component';
 import { ListarOperarioComponent } from './componentes/operario/listar-operario/listar-operario.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { ListarOperarioComponent } from './componentes/operario/listar-operario/
   ],
   imports: [
     FabricaRoutingModule,
-    SharedModule
+    SharedModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [LoteService,
     OperacionService,

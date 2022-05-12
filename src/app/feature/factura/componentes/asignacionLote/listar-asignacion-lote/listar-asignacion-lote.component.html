@@ -1,0 +1,23 @@
+<p class="titulo margin-top"><strong>Listado de Asignacion de Lotes</strong></p>
+
+<div>
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">Referencia Asignacion</th>
+            <th scope="col">Id Operario</th>
+            <th scope="col">ReferenciaLote</th>
+            <th scope="col">Cantidad Prendas</th>
+            <th scope="col">Operación</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let asignacion of listaAsignacionLotes">
+            <td>{{asignacion.id}}</td>
+            <td>{{asignacion.operarioId}}</td>
+            <td>{{asignacion.referenciaLote}}</td>
+            <td>{{asignacion.cantidadPrendas}}</td>
+            <td>{{asignacion.operacionId}}</td>
+        </tbody>
+      </table>
+</div>

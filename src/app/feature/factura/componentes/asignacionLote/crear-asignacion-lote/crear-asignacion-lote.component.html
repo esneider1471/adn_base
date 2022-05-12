@@ -1,0 +1,62 @@
+<p class="titulo margin-top"><strong>Crearción de Asignación Lotes</strong></p>
+
+<div class="col-md-12">
+    <div class="col-md-6" style="float: left;">
+        <form [formGroup]="asignacionLoteForm" class="margin-form">
+            <div class="row ">
+                <div class="col-sm-12">
+                    <label>Referencia Asignacion</label>
+                    <input validar type="number" id="id" name="id" placeholder="Referencia asignacion"
+                        class="form-control" formControlName="id">
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>Operario</label>
+                    <select formControlName="operarioId" class="form-control">
+                        <option *ngFor="let operario of listaOperarios" [ngValue]="operario.id">
+                            {{ operario.nombre }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>Referencia Lote</label>
+                    <select formControlName="referenciaLote" class="form-control">
+                        <option *ngFor="let lote of listaLotes" [ngValue]="lote.id">
+                            {{ lote.id }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>Cantidad Prendas</label>
+                    <input validar type="number" id="cantidadPrendas" name="cantidadPrendas"
+                        placeholder="Cantidad Prendas" class="form-control" formControlName="cantidadPrendas">
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <label>Operación</label>
+                    <select formControlName="operacionId" class="form-control">
+                        <option *ngFor="let operacion of listaOperaciones" [ngValue]="operacion.id">
+                            {{ operacion.id }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row margin-top">
+                <div class="col-sm-12">
+                    <button
+                        [disabled]="asignacionLoteForm.controls.id.errors || asignacionLoteForm.controls.referenciaLote.errors
+                    || asignacionLoteForm.controls.cantidadPrendas.errors || asignacionLoteForm.controls.operacionId.errors
+                    || asignacionLoteForm.controls.operarioId.errors"
+                        class="btn btn-primary form-control" (click)="crearAsignacionLote()">Crear</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>

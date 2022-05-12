@@ -25,6 +25,9 @@
       ],
       "@login/*": [
         "src/app/feature/login/*"
+      ],
+      "@factura/*": [
+        "src/app/feature/factura/*"
       ]
     }
   },
