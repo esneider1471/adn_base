@@ -10,6 +10,7 @@ describe('OperacionService', () => {
   let service: OperacionService;
   let httpMock: HttpTestingController;
   const apiEndpointOperacion = `${environment.endpoint}/operacion`;
+  const apiEndpointOperacionId = `${environment.endpoint}/operacion?id=op04`;
 
   beforeEach(() => {
     const injector = TestBed.configureTestingModule({
@@ -46,5 +47,16 @@ describe('OperacionService', () => {
     const req = httpMock.expectOne(apiEndpointOperacion);
     expect(req.request.method).toBe('POST');
     req.event(new HttpResponse<boolean>({body: true}));
+  });
+
+  it('deberia listar operacion por operacionId', () => {
+    const dummyAsignacion = [new Operacion('op04', 'corte', 200)];
+    service.consultarOperacionId('op04').then(operacion => {
+      expect(operacion.length).toBe(1);
+      expect(operacion).toEqual(dummyAsignacion);
+    });
+    const req = httpMock.expectOne(apiEndpointOperacionId);
+    expect(req.request.method).toBe('GET');
+    req.flush(dummyAsignacion);
   });
 });

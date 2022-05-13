@@ -1,3 +1,4 @@
+import { HttpResponse } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { Lote } from '@fabrica/shared/model/lote';
@@ -24,7 +25,7 @@ describe('LoteService', () => {
     expect(loteService).toBeTruthy();
   });
 
-  it('deberia crear un lote', () => {
+  it('deberia listar un lote', () => {
     const dummyLotes = [
       new Lote('rf01', 25, '10/02/2022', '10/03/2022', 'img1'), new Lote('rf01', 25, '10/02/2022', '10/03/2022', 'img1')
     ];
@@ -35,6 +36,16 @@ describe('LoteService', () => {
     const req = httpMock.expectOne(apiEndpointLoteConsulta);
     expect(req.request.method).toBe('GET');
     req.flush(dummyLotes);
+  });
+
+  it('deberia crear un lote', () => {
+    const dummyLote = new Lote('rf01', 25, '10/02/2022', '10/03/2022', 'img1');
+    service.crearLote(dummyLote).subscribe((respuesta) => {
+      expect(respuesta).toEqual(respuesta);
+    });
+    const req = httpMock.expectOne(apiEndpointLoteConsulta);
+    expect(req.request.method).toBe('POST');
+    req.event(new HttpResponse<boolean>({body: true}));
   });
 
 });

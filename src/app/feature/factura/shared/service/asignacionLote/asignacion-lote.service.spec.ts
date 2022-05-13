@@ -10,6 +10,7 @@ describe('AsignacionLoteService', () => {
   let httpMock: HttpTestingController;
   let service: AsignacionLoteService;
   const apiEndpointAsignacionConsulta = `${environment.endpoint}/asignacionLote`;
+  const apiEndpointAsignacionOperarioIdConsulta = `${environment.endpoint}/asignacionLote?operarioId=102614544`;
 
   beforeEach(() => {
     const injector= TestBed.configureTestingModule({
@@ -26,7 +27,7 @@ describe('AsignacionLoteService', () => {
     expect(asignacionLoteService).toBeTruthy();
   });
 
-  it('deberia listar Asinaciones', () => {
+  it('deberia listar Asignaciones', () => {
     const dummyAsignacion = [
       new AsignacionLote(4, 'rf08', 14, 'op02','102614544'), new  AsignacionLote(5, 'rf08', 15, 'op03','1026156333')
     ];
@@ -47,5 +48,17 @@ describe('AsignacionLoteService', () => {
     const req = httpMock.expectOne(apiEndpointAsignacionConsulta);
     expect(req.request.method).toBe('POST');
     req.event(new HttpResponse<boolean>({ body: true }));
+  });
+
+  it('deberia listar Asignaciones por operarioId', () => {
+    const dummyAsignacion = [
+      new AsignacionLote(4, 'rf08', 14, 'op02','102614544')];
+    service.consultarAsignacionOperarioId('102614544').then(asignacion => {
+      expect(asignacion.length).toBe(1);
+      expect(asignacion).toEqual(dummyAsignacion);
+    });
+    const req = httpMock.expectOne(apiEndpointAsignacionOperarioIdConsulta);
+    expect(req.request.method).toBe('GET');
+    req.flush(dummyAsignacion);
   });
 });
