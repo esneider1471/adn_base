@@ -77,6 +77,13 @@
       "fechaInicio": "2020-10-02",
       "fechaFin": "2021-10-03",
       "foto": "url"
+    },
+    {
+      "id": "l89",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
     }
   ],
   "operacion": [

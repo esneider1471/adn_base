@@ -44,6 +44,8 @@ describe('CrearOperacionComponent', () => {
     component.operacionForm.controls.nombreOperacion.setValue('corte');
     component.operacionForm.controls.valorOperacionUnidad.setValue(200);
     expect(component.operacionForm.valid).toBeTruthy();
+
+    component.crearOperacion();
   });
 
 });

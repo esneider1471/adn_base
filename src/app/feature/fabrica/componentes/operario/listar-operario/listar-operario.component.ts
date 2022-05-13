@@ -18,7 +18,7 @@ export class ListarOperarioComponent implements OnInit {
     this.listarOperarios();
   }
 
-  private listarOperarios() {
+   listarOperarios() {
     this.operarioSnervice.listarOperarios().subscribe(resp =>
       this.listaOperarios = resp
     );

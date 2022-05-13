@@ -56,7 +56,6 @@ describe('CrearLoteComponent', () => {
     expect(component.loteForm.valid).toBeTruthy();
     component.crearLote();
     expect(loteService.crearLote).toHaveBeenCalled();
-    /*  expect(component.loteForm.value).toEqual(lote); */
   });
 
 });

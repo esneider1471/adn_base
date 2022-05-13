@@ -45,5 +45,7 @@ describe('CrearOperarioComponent', () => {
     component.operarioForm.controls.telefono.setValue('2226699');
     component.operarioForm.controls.direccion.setValue('cra 98 # 20 45');
     expect(component.operarioForm.valid).toBeTruthy();
+
+    component.crearOperario();
   });
 });
