@@ -1,21 +1,50 @@
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpResponse } from '@angular/common/http';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
+import { Operario } from '@fabrica/shared/model/operario';
+import { environment } from 'src/environments/environment';
 
 import { OperarioService } from './operario.service';
 
 describe('OperarioService', () => {
+  let httpMock: HttpTestingController;
   let service: OperarioService;
+  const apiEndpointOperarioConsulta = `${environment.endpoint}/operario`;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
+    const injector = TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [OperarioService]
     });
+    httpMock = injector.inject(HttpTestingController);
     service = TestBed.inject(OperarioService);
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    const operarioService: OperarioService = TestBed.inject(OperarioService);
+    expect(operarioService).toBeTruthy();
   });
 
+  it('deberia listar operarios', () => {
+    const dummyOperarios = [
+      new Operario('1', 'operario 1', '2222222', 'cra 66'), new Operario('2', 'operario 2', '222333', 'cra 85')
+    ];
+    service.listarOperarios().subscribe(operarios => {
+      expect(operarios.length).toBe(2);
+      expect(operarios).toEqual(dummyOperarios);
+    });
+    const req = httpMock.expectOne(apiEndpointOperarioConsulta);
+    expect(req.request.method).toBe('GET');
+    req.flush(dummyOperarios);
+  });
+
+  it('deberia crear un operario', () => {
+    const dummyOperario = new Operario('1', 'operario 1', '2222222', 'cra 66');
+    service.crearOperario(dummyOperario).subscribe((respuesta) => {
+      expect(respuesta).toEqual(respuesta);
+    });
+    const req = httpMock.expectOne(apiEndpointOperarioConsulta);
+    expect(req.request.method).toBe('POST');
+    req.event(new HttpResponse<boolean>({ body: true }));
+  });
 });

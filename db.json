@@ -35,6 +35,48 @@
       "fechaInicio": "2022-05-12",
       "fechaFin": "2022-05-19",
       "foto": "https://seguridadindustrialymedica.com/wp-content/uploads/2020/01/camisa-oxford-azul.jpg"
+    },
+    {
+      "id": "l45",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l46",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l47",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l[object Promise]",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "lr",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l75",
+      "cantidad": 14,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
     }
   ],
   "operacion": [
@@ -64,7 +106,7 @@
     }
   ],
   "asignacionLote": [
-       {
+    {
       "id": 4,
       "referenciaLote": "rf08",
       "cantidadPrendas": 14,

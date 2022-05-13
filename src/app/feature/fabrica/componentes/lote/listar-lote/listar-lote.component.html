@@ -11,7 +11,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let lote of listaLotes; trackBy">
+          <tr id="idLotes" *ngFor="let lote of listaLotes; trackBy">
             <td>{{lote.id}}</td>
             <td>{{lote.cantidad}}</td>
             <td>{{lote.fechaInicio}}</td>

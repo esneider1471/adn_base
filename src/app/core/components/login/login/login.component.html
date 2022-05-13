@@ -16,7 +16,7 @@
         </div>
         <div class="row margin-top">
             <div class="col-sm-12">
-                <button [disabled]="loginForm.controls.email.errors || loginForm.controls.password.errors"
+                <button id="btnLogin" [disabled]="loginForm.controls.email.errors || loginForm.controls.password.errors"
                     class="btn btn-primary form-control" (click)="consultarUsuario()">Log In</button>
             </div>
         </div>

@@ -21,7 +21,7 @@ export class PagoOperarioComponent {
   }
 
   calcularTotal() {
-    this.totalPagar=0;
+    this.totalPagar = 0;
     for (const pago of this.pagoOperario) {
       this.totalPagar += pago.cantidadPrendas * pago.valorOperacion;
     }
