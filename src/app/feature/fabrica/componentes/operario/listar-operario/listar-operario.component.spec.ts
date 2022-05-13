@@ -11,7 +11,7 @@ import { ListarOperarioComponent } from './listar-operario.component';
 describe('ListarOperarioComponent', () => {
   let component: ListarOperarioComponent;
   let fixture: ComponentFixture<ListarOperarioComponent>;
-  let operacionService: OperarioService;
+  let operarioService: OperarioService;
   const operarios: Operario[] = [
     new Operario('102614544', 'juan', '8744555','cr 89 #20 66'),
     new Operario('1026165144', 'andres', '87444411','cr 22 #20 66')];
@@ -33,8 +33,8 @@ describe('ListarOperarioComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ListarOperarioComponent);
     component = fixture.componentInstance;
-    operacionService = TestBed.inject(OperarioService);
-    spyOn(operacionService, 'listarOperarios').and.returnValue(
+    operarioService = TestBed.inject(OperarioService);
+    spyOn(operarioService, 'listarOperarios').and.returnValue(
       of(operarios)
     );
     fixture.detectChanges();

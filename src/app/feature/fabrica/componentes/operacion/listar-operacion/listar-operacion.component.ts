@@ -18,7 +18,7 @@ export class ListarOperacionComponent implements OnInit {
     this.listarOperaciones();
   }
 
-  private listarOperaciones() {
+   listarOperaciones() {
     this.operacionService.listarOperaciones().subscribe(resp =>
       this.listaOperaciones = resp
     );
