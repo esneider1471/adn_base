@@ -2,13 +2,17 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Operacion } from '@fabrica/shared/model/operacion';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
+import { of } from 'rxjs';
 
 import { CrearOperacionComponent } from './crear-operacion.component';
 
 describe('CrearOperacionComponent', () => {
   let component: CrearOperacionComponent;
   let fixture: ComponentFixture<CrearOperacionComponent>;
+  let coperacionService: OperacionService;
+  const operacion = new Operacion('op04', 'corte', 200);
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -27,6 +31,10 @@ describe('CrearOperacionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CrearOperacionComponent);
     component = fixture.componentInstance;
+    coperacionService = TestBed.inject(OperacionService);
+    spyOn(coperacionService, 'crearOperacion').and.returnValue(
+      of(operacion)
+    );
     fixture.detectChanges();
   });
 

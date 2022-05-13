@@ -2,13 +2,17 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Operario } from '@fabrica/shared/model/operario';
 import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { of } from 'rxjs';
 
 import { CrearOperarioComponent } from './crear-operario.component';
 
 describe('CrearOperarioComponent', () => {
   let component: CrearOperarioComponent;
   let fixture: ComponentFixture<CrearOperarioComponent>;
+  let coperarioService: OperarioService;
+  const operario:Operario = new Operario('1', 'operario 1', '2222222', 'cra 66');
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -27,6 +31,10 @@ describe('CrearOperarioComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CrearOperarioComponent);
     component = fixture.componentInstance;
+    coperarioService = TestBed.inject(OperarioService);
+    spyOn(coperarioService, 'crearOperario').and.returnValue(
+      of(operario)
+    );
     fixture.detectChanges();
   });
 
