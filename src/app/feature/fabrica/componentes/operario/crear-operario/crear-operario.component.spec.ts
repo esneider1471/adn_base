@@ -11,7 +11,7 @@ import { CrearOperarioComponent } from './crear-operario.component';
 describe('CrearOperarioComponent', () => {
   let component: CrearOperarioComponent;
   let fixture: ComponentFixture<CrearOperarioComponent>;
-  let coperarioService: OperarioService;
+  let operarioService: OperarioService;
   const operario:Operario = new Operario('1', 'operario 1', '2222222', 'cra 66');
 
   beforeEach(async () => {
@@ -31,8 +31,8 @@ describe('CrearOperarioComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CrearOperarioComponent);
     component = fixture.componentInstance;
-    coperarioService = TestBed.inject(OperarioService);
-    spyOn(coperarioService, 'crearOperario').and.returnValue(
+    operarioService = TestBed.inject(OperarioService);
+    spyOn(operarioService, 'crearOperario').and.returnValue(
       of(operario)
     );
     fixture.detectChanges();
@@ -55,5 +55,6 @@ describe('CrearOperarioComponent', () => {
     expect(component.operarioForm.valid).toBeTruthy();
 
     component.crearOperario();
+    expect(operarioService.crearOperario).toHaveBeenCalled();
   });
 });

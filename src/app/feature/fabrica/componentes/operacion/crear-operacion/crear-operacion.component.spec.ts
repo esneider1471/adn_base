@@ -11,7 +11,7 @@ import { CrearOperacionComponent } from './crear-operacion.component';
 describe('CrearOperacionComponent', () => {
   let component: CrearOperacionComponent;
   let fixture: ComponentFixture<CrearOperacionComponent>;
-  let coperacionService: OperacionService;
+  let operacionService: OperacionService;
   const operacion = new Operacion('op04', 'corte', 200);
 
   beforeEach(waitForAsync(() => {
@@ -31,8 +31,8 @@ describe('CrearOperacionComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CrearOperacionComponent);
     component = fixture.componentInstance;
-    coperacionService = TestBed.inject(OperacionService);
-    spyOn(coperacionService, 'crearOperacion').and.returnValue(
+    operacionService = TestBed.inject(OperacionService);
+    spyOn(operacionService, 'crearOperacion').and.returnValue(
       of(operacion)
     );
     fixture.detectChanges();
@@ -54,6 +54,7 @@ describe('CrearOperacionComponent', () => {
     expect(component.operacionForm.valid).toBeTruthy();
 
     component.crearOperacion();
+    expect(operacionService.crearOperacion).toHaveBeenCalled();
   });
 
 });
