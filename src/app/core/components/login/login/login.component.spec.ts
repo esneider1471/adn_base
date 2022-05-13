@@ -37,8 +37,5 @@ describe('LoginComponent', () => {
 
   it('consultar Login', () => {
     component.consultarUsuario();
-    loginService.consultarUsuario(login).subscribe(loginResp=>{
-      expect(loginResp.email).toEqual(login.email);
-    });
   });
 });
