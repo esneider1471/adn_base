@@ -4,7 +4,7 @@
     <div class="row ">
         <div class="col-sm-4">
             <label>Identificacion</label>
-            <input validar type="text" id="id" name="id" placeholder="Identificacion"
+            <input validar type="text" id="idOperario" name="idOperario" placeholder="Identificacion"
                 class="form-control" formControlName="id">
         </div>
     </div>
@@ -31,7 +31,7 @@
     </div>
     <div class="row margin-top">
         <div class="col-sm-4">
-            <button [disabled]="operarioForm.controls.id.errors || operarioForm.controls.nombre.errors || operarioForm.controls.telefono.errors
+            <button id="btnCrearOperario" [disabled]="operarioForm.controls.id.errors || operarioForm.controls.nombre.errors || operarioForm.controls.telefono.errors
             || operarioForm.controls.direccion.errors" class="btn btn-primary form-control"  (click)="crearOperario()">Crear</button>
         </div>
       </div>

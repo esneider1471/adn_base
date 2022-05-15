@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   title = 'app-base';
   isLogin: Login;
 
-  constructor(private login: LoginService) { }
+  constructor(public login: LoginService) { }
 
   ngOnInit() {
     this.login.isLogin$.subscribe(respuesta =>

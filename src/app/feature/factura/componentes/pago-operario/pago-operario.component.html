@@ -2,8 +2,8 @@
 
 <div class="row margin-top">
 <div class="col-md-12" style="margin-left: 10px;">
-    <input type="text" style="width: 200px;float: left;" class="form-control" placeholder="Id Operario" [(ngModel)]="idOperario">
-    <button [disabled]="!idOperario" (click)="consultarPagoOperario()" class="form-control btn btn-primary" style="width: 100px;float: left;" >Consultar</button>
+    <input type="text" id="inputIdOperario" style="width: 200px;float: left;" class="form-control" placeholder="Id Operario" [(ngModel)]="idOperario">
+    <button [disabled]="!idOperario"  id="btnConsultarOperario" (click)="consultarPagoOperario()" class="form-control btn btn-primary" style="width: 100px;float: left;" >Consultar</button>
 </div>
 </div>
 <div class="margin-top">
@@ -18,7 +18,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let pago of pagoOperario">
+          <tr id="idPagoOperarios" *ngFor="let pago of pagoOperario">
             <td>{{pago.operario}}</td>
             <td>{{pago.referenciaLote}}</td>
             <td>{{pago.operacion}}</td>

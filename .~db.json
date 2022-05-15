@@ -198,6 +198,13 @@
       "cantidadPrendas": 77,
       "operacionId": "op40",
       "operarioId": "o69"
+    },
+    {
+      "id": 53,
+      "referenciaLote": "l6",
+      "cantidadPrendas": 53,
+      "operacionId": "op40",
+      "operarioId": "o69"
     }
   ],
   "login": [

@@ -6,15 +6,15 @@
             <div class="row ">
                 <div class="col-sm-12">
                     <label>Referencia Asignacion</label>
-                    <input validar type="number" id="id" name="id" placeholder="Referencia asignacion"
+                    <input validar type="number" id="idAsignacionLote" name="idAsignacionLote" placeholder="Referencia asignacion"
                         class="form-control" formControlName="id">
                 </div>
             </div>
             <div class="row margin-top">
                 <div class="col-sm-12">
                     <label>Operario</label>
-                    <select formControlName="operarioId" class="form-control">
-                        <option *ngFor="let operario of listaOperarios" [ngValue]="operario.id">
+                    <select formControlName="operarioId" id="selectOperario" class="form-control">
+                        <option *ngFor="let operario of listaOperarios; let i = index" id="optionOperario-{{i}}" [ngValue]="operario.id">
                             {{ operario.nombre }}
                         </option>
                     </select>
@@ -23,8 +23,8 @@
             <div class="row margin-top">
                 <div class="col-sm-12">
                     <label>Referencia Lote</label>
-                    <select formControlName="referenciaLote" class="form-control">
-                        <option *ngFor="let lote of listaLotes" [ngValue]="lote.id">
+                    <select formControlName="referenciaLote" id="selectReferenciaLote" class="form-control">
+                        <option *ngFor="let lote of listaLotes; let i = index" id="optionReferenciaLote-{{i}}" [ngValue]="lote.id">
                             {{ lote.id }}
                         </option>
                     </select>
@@ -40,8 +40,8 @@
             <div class="row margin-top">
                 <div class="col-sm-12">
                     <label>Operación</label>
-                    <select formControlName="operacionId" class="form-control">
-                        <option *ngFor="let operacion of listaOperaciones" [ngValue]="operacion.id">
+                    <select formControlName="operacionId" id="selectOperacion" class="form-control">
+                        <option *ngFor="let operacion of listaOperaciones; let i = index" id="optionOperacion-{{i}}"[ngValue]="operacion.id">
                             {{ operacion.id }}
                         </option>
                     </select>
@@ -49,7 +49,7 @@
             </div>
             <div class="row margin-top">
                 <div class="col-sm-12">
-                    <button
+                    <button id="btnCrearAsignacionLote"
                         [disabled]="asignacionLoteForm.controls.id.errors || asignacionLoteForm.controls.referenciaLote.errors
                     || asignacionLoteForm.controls.cantidadPrendas.errors || asignacionLoteForm.controls.operacionId.errors
                     || asignacionLoteForm.controls.operarioId.errors"

@@ -49,7 +49,7 @@ describe('OperacionService', () => {
     req.event(new HttpResponse<boolean>({body: true}));
   });
 
-  it('deberia listar operacion por operacionId', () => {
+  it('deberia consultar operacion por operacionId', () => {
     const dummyAsignacion = [new Operacion('op04', 'corte', 200)];
     service.consultarOperacionId('op04').then(operacion => {
       expect(operacion.length).toBe(1);
