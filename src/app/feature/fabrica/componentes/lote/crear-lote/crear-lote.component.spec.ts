@@ -3,6 +3,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { Lote } from '@shared/model/lote';
 import { LoteService } from '@shared/service/lote/lote.service';
@@ -28,7 +29,8 @@ describe('CrearLoteComponent', () => {
         FormsModule,
         HttpClientTestingModule,
         MatDialogModule,
-        RouterTestingModule
+        RouterTestingModule,
+        BrowserAnimationsModule
       ],
       providers: [LoteService, MensajeService]
     })
