@@ -10,7 +10,7 @@ describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let loginService: LoginService;
-  const dummyLogin =  new Login('test@test.com', '123');
+  const dummyLogin = new Login('test@test.com', '123');
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -34,6 +34,6 @@ describe('LoginComponent', () => {
 
   it('consultar Login', () => {
     component.consultarUsuario();
-  
+
   });
 });

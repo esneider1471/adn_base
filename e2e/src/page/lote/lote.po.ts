@@ -1,11 +1,9 @@
 import { browser, by, element, protractor } from 'protractor';
 
 export class LotePage {
-    /*  menu */
     private linkListarLote = element(by.id('linkListarLote'));
     private linkCrearLote = element(by.id('linkCrearLote'));
     private dropdownLote = element(by.id('dropdownLote'));
-    //campos
     private listaLotes = element.all(by.id('idLotes'));
     private idLote = element(by.id('idLote'));
     private cantidadLote = element(by.id('cantidadLote'));

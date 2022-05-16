@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Operario } from '@shared/model/operario';
 import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
 import { of } from 'rxjs';
 
@@ -12,7 +12,7 @@ describe('CrearOperarioComponent', () => {
   let component: CrearOperarioComponent;
   let fixture: ComponentFixture<CrearOperarioComponent>;
   let operarioService: OperarioService;
-  const operario:Operario = new Operario('1', 'operario 1', '2222222', 'cra 66');
+  const operario: Operario = new Operario('1', 'operario 1', '2222222', 'cra 66');
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

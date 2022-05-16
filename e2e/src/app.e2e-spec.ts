@@ -1,13 +1,11 @@
 import { browser, logging } from 'protractor';
 
 describe('workspace-project App', () => {
-/*   let page: AppPage; */
+  /*   let page: AppPage; */
 
- /*  beforeEach(() => {
-    page = new AppPage();
-  }); */
-
- 
+  /*  beforeEach(() => {
+     page = new AppPage();
+   }); */
 
   afterEach(async () => {
     // Assert that there are no errors emitted from the browser

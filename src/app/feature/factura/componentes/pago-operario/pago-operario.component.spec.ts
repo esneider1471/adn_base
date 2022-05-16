@@ -12,11 +12,11 @@ describe('PagoOperarioComponent', () => {
   let component: PagoOperarioComponent;
   let fixture: ComponentFixture<PagoOperarioComponent>;
   let pagoOperarioService: PagoOperarioService;
-  const pagoOperario: Pago[]=[];
+  const pagoOperario: Pago[] = [];
   pagoOperario.push(
-    {operario:'o69',referenciaLote: 'l6', operacion:'op40', cantidadPrendas:12, valorOperacion:100},
-    {operario:'o69',referenciaLote: 'l6', operacion:'op40', cantidadPrendas:10, valorOperacion:400},
-    ); 
+    { operario: 'o69', referenciaLote: 'l6', operacion: 'op40', cantidadPrendas: 12, valorOperacion: 100 },
+    { operario: 'o69', referenciaLote: 'l6', operacion: 'op40', cantidadPrendas: 10, valorOperacion: 400 },
+  );
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -46,13 +46,11 @@ describe('PagoOperarioComponent', () => {
 
   it('consultar pago operarios', () => {
     component.consultarPagoOperario();
-   
-   /*  expect(component.pagoOperario.length).toEqual(2); */
+    /*  expect(component.pagoOperario.length).toEqual(2); */
   });
 
   it('calcular Total', () => {
-   
-    expect(component.totalPagar).not.toEqual(0); 
+    expect(component.totalPagar).not.toEqual(0);
   });
 
 });

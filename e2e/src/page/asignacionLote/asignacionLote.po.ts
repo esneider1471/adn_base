@@ -1,11 +1,9 @@
-import {  browser, by, element, protractor } from 'protractor';
+import { browser, by, element, protractor } from 'protractor';
 
 export class AsignacionLotePage {
-    /*  menu */
     private linkListarAsignacionLote = element(by.id('linkListarAsignacionLote'));
     private linkCrearAsignacionLote = element(by.id('linkCrearAsignacionLote'));
     private dropdownAignacionLote = element(by.id('dropdownAsignacionLote'));
-    //campos
     private listaAsignacionLotes = element.all(by.id('idAsignacionLotes'));
     private idAsignacionLote = element(by.id('idAsignacionLote'));
     private selectOperario = element(by.id('selectOperario'));
@@ -27,14 +25,14 @@ export class AsignacionLotePage {
         browser.wait(this.condicion.presenceOf(this.idAsignacionLote), 10000);
         await this.idAsignacionLote.sendKeys(idAsignacionLote);
         await this.selectOperario.click();
-        let optOperario = element(by.id('optionOperario-1'));
+        const optOperario = element(by.id('optionOperario-1'));
         await optOperario.click();
         await this.selectReferenciaLote.click();
-        let optReferenciaLote = element(by.id('optionReferenciaLote-1'));
+        const optReferenciaLote = element(by.id('optionReferenciaLote-1'));
         await optReferenciaLote.click();
         await this.cantidadPrendas.sendKeys(cantidadPrendas);
         await this.selectOperacion.click();
-        let optOperacion = element(by.id('optionOperacion-1'));
+        const optOperacion = element(by.id('optionOperacion-1'));
         await optOperacion.click();
 
         await this.btnCrearAsignacionLote.click();

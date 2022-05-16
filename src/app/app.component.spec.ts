@@ -8,8 +8,8 @@ import { LoginService } from '@core/components/login/shared/services/login.servi
 
 describe('AppComponent', () => {
   let component: AppComponent;
- /*  let login: LoginService; */
- /*  const dummyLogin =  new Login('test@test.com', '123'); */
+  /*  let login: LoginService; */
+  /*  const dummyLogin =  new Login('test@test.com', '123'); */
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -18,12 +18,12 @@ describe('AppComponent', () => {
       ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       imports: [HttpClientTestingModule,
-                RouterTestingModule],
-      providers:[LoginService]
+        RouterTestingModule],
+      providers: [LoginService]
     }).compileComponents();
     const fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;
-   /*  login = TestBed.inject(LoginService); */
+    /*  login = TestBed.inject(LoginService); */
     /* spyOn(login, 'isLogin$').and.returnValue(
       of( dummyLogin) as EventEmitter<Login>
     ); */
@@ -43,17 +43,17 @@ describe('AppComponent', () => {
   });
 
   it(`tiene sesion activa`, () => {
-    
+
     component.ngOnInit();
-   /*  expect(component.login.isLogin$).toHaveBeenCalled();
-   component.login.isLogin$.subscribe(respuesta =>{
-     expect(component.isLogin).toEqual(respuesta);
-   }); */
-   });
- 
+    /*  expect(component.login.isLogin$).toHaveBeenCalled();
+    component.login.isLogin$.subscribe(respuesta =>{
+      expect(component.isLogin).toEqual(respuesta);
+    }); */
+  });
+
 
   it(`deberia hacer logOut`, () => {
-   component.logOut();
+    component.logOut();
   });
 
 

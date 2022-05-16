@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Operacion } from '@fabrica/shared/model/operacion';
+import { Operacion } from '@shared/model/operacion';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
 import { of } from 'rxjs';
 

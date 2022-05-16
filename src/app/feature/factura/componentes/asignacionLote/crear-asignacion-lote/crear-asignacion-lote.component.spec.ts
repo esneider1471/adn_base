@@ -2,9 +2,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Lote } from '@fabrica/shared/model/lote';
-import { Operacion } from '@fabrica/shared/model/operacion';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Lote } from '@shared/model/lote';
+import { Operacion } from '@shared/model/operacion';
+import { Operario } from '@shared/model/operario';
 import { LoteService } from '@fabrica/shared/service/lote/lote.service';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
 import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
@@ -73,7 +73,6 @@ describe('CrearAsignacionLoteComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  
   it('consulto lotes', () => {
     expect(component.listaLotes.length).toEqual(2);
   });

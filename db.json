@@ -55,6 +55,20 @@
       "fechaInicio": "2020-10-02",
       "fechaFin": "2021-10-03",
       "foto": "url"
+    },
+    {
+      "id": "l41",
+      "cantidad": 41,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "L12",
+      "cantidad": 45,
+      "fechaInicio": "2022-05-11",
+      "fechaFin": "2022-05-19",
+      "foto": "https://i.pinimg.com/736x/1a/30/ba/1a30bafc0af4e1000c49f63170645926.jpg"
     }
   ],
   "operacion": [
@@ -69,34 +83,14 @@
       "valorOperacionUnidad": 40
     },
     {
-      "id": "op26",
-      "nombreOperacion": "prueba26",
-      "valorOperacionUnidad": 26
+      "id": "op28",
+      "nombreOperacion": "prueba28",
+      "valorOperacionUnidad": 28
     },
     {
-      "id": "op41",
-      "nombreOperacion": "prueba41",
-      "valorOperacionUnidad": 41
-    },
-    {
-      "id": "op67",
-      "nombreOperacion": "prueba67",
-      "valorOperacionUnidad": 67
-    },
-    {
-      "id": "op87",
-      "nombreOperacion": "prueba87",
-      "valorOperacionUnidad": 87
-    },
-    {
-      "id": "op89",
-      "nombreOperacion": "prueba89",
-      "valorOperacionUnidad": 89
-    },
-    {
-      "id": "op45",
-      "nombreOperacion": "prueba45",
-      "valorOperacionUnidad": 45
+      "id": "o89",
+      "nombreOperacion": "pulida",
+      "valorOperacionUnidad": 0
     }
   ],
   "operario": [
@@ -113,40 +107,16 @@
       "direccion": "cra 254"
     },
     {
-      "id": "o62",
-      "nombre": "operario62",
+      "id": "o28",
+      "nombre": "operario28",
       "telefono": "2229966",
       "direccion": "cra 254"
     },
     {
-      "id": "o77",
-      "nombre": "operario77",
-      "telefono": "2229966",
-      "direccion": "cra 254"
-    },
-    {
-      "id": "o27",
-      "nombre": "operario27",
-      "telefono": "2229966",
-      "direccion": "cra 254"
-    },
-    {
-      "id": "o52",
-      "nombre": "operario52",
-      "telefono": "2229966",
-      "direccion": "cra 254"
-    },
-    {
-      "id": "o4",
-      "nombre": "operario4",
-      "telefono": "2229966",
-      "direccion": "cra 254"
-    },
-    {
-      "id": "o91",
-      "nombre": "operario91",
-      "telefono": "2229966",
-      "direccion": "cra 254"
+      "id": "1244588",
+      "nombre": "esteban",
+      "telefono": "8877499",
+      "direccion": "cra 34"
     }
   ],
   "asignacionLote": [
@@ -165,39 +135,18 @@
       "operarioId": "o69"
     },
     {
-      "id": 20,
+      "id": 23,
       "referenciaLote": "l6",
-      "cantidadPrendas": 20,
+      "cantidadPrendas": 23,
       "operacionId": "op40",
       "operarioId": "o69"
     },
     {
-      "id": 83,
-      "referenciaLote": "l6",
-      "cantidadPrendas": 83,
-      "operacionId": "op40",
-      "operarioId": "o69"
-    },
-    {
-      "id": 6,
-      "referenciaLote": "l6",
-      "cantidadPrendas": 6,
-      "operacionId": "op40",
-      "operarioId": "o69"
-    },
-    {
-      "id": 42,
-      "referenciaLote": "l6",
-      "cantidadPrendas": 42,
-      "operacionId": "op40",
-      "operarioId": "o69"
-    },
-    {
-      "id": 77,
-      "referenciaLote": "l6",
-      "cantidadPrendas": 77,
-      "operacionId": "op40",
-      "operarioId": "o69"
+      "id": 12,
+      "referenciaLote": "L12",
+      "cantidadPrendas": 12,
+      "operacionId": "o89",
+      "operarioId": "1244588"
     }
   ],
   "login": [

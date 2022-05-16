@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Operacion } from '@fabrica/shared/model/operacion';
+import { Operacion } from '@shared/model/operacion';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
 
 @Component({

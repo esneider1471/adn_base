@@ -13,7 +13,7 @@ describe('AsignacionLoteService', () => {
   const apiEndpointAsignacionOperarioIdConsulta = `${environment.endpoint}/asignacionLote?operarioId=102614544`;
 
   beforeEach(() => {
-    const injector= TestBed.configureTestingModule({
+    const injector = TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [AsignacionLoteService]
     });
@@ -21,7 +21,6 @@ describe('AsignacionLoteService', () => {
     service = TestBed.inject(AsignacionLoteService);
   });
 
- 
   it('should be created', () => {
     const asignacionLoteService: AsignacionLoteService = TestBed.inject(AsignacionLoteService);
     expect(asignacionLoteService).toBeTruthy();
@@ -29,7 +28,7 @@ describe('AsignacionLoteService', () => {
 
   it('deberia listar Asignaciones', () => {
     const dummyAsignacion = [
-      new AsignacionLote(4, 'rf08', 14, 'op02','102614544'), new  AsignacionLote(5, 'rf08', 15, 'op03','1026156333')
+      new AsignacionLote(4, 'rf08', 14, 'op02', '102614544'), new AsignacionLote(5, 'rf08', 15, 'op03', '1026156333')
     ];
     service.listarAsignacionLotes().subscribe(asignacion => {
       expect(asignacion.length).toBe(2);
@@ -41,7 +40,7 @@ describe('AsignacionLoteService', () => {
   });
 
   it('deberia crear un operario', () => {
-    const dummyAsignacion = new AsignacionLote(4, 'rf08', 14, 'op02','102614544');
+    const dummyAsignacion = new AsignacionLote(4, 'rf08', 14, 'op02', '102614544');
     service.crearAsignacionLote(dummyAsignacion).subscribe((respuesta) => {
       expect(respuesta).toEqual(respuesta);
     });
@@ -52,7 +51,7 @@ describe('AsignacionLoteService', () => {
 
   it('deberia listar Asignaciones por operarioId', () => {
     const dummyAsignacion = [
-      new AsignacionLote(4, 'rf08', 14, 'op02','102614544')];
+      new AsignacionLote(4, 'rf08', 14, 'op02', '102614544')];
     service.consultarAsignacionOperarioId('102614544').then(asignacion => {
       expect(asignacion.length).toBe(1);
       expect(asignacion).toEqual(dummyAsignacion);

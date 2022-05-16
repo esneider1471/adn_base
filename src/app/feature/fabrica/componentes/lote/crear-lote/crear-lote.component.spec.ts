@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { Lote } from '@fabrica/shared/model/lote';
+import { Lote } from '@shared/model/lote';
 import { LoteService } from '@fabrica/shared/service/lote/lote.service';
 import { of } from 'rxjs';
 

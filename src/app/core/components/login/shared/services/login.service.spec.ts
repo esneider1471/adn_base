@@ -12,7 +12,7 @@ describe('LoginService', () => {
   const apiEndpointLoginConsulta = `${environment.endpoint}/login?email=test@test.com&password=123`;
 
   beforeEach(() => {
-    const injector =TestBed.configureTestingModule({
+    const injector = TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule],
     });
     httpMock = injector.inject(HttpTestingController);
@@ -25,8 +25,7 @@ describe('LoginService', () => {
   });
 
   it('deberia listar operarios', () => {
-    const dummyLogin =  new Login('test@test.com', '123');
-    ;
+    const dummyLogin = new Login('test@test.com', '123');
     service.consultarUsuario(dummyLogin).subscribe(login => {
       expect(login.email).toBe(dummyLogin.email);
       expect(login).toEqual(dummyLogin);

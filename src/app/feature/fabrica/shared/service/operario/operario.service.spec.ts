@@ -1,7 +1,7 @@
 import { HttpResponse } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Operario } from '@shared/model/operario';
 import { environment } from 'src/environments/environment';
 
 import { OperarioService } from './operario.service';

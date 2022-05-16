@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Operacion } from '@fabrica/shared/model/operacion';
+import { Operacion } from '@shared/model/operacion';
 import { environment } from 'src/environments/environment';
 
 @Injectable()

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Lote } from '@fabrica/shared/model/lote';
+import { Lote } from '@shared/model/lote';
 import { LoteService } from '@fabrica/shared/service/lote/lote.service';
 
 @Component({

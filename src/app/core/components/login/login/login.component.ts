@@ -21,9 +21,8 @@ export class LoginComponent implements OnInit {
 
   consultarUsuario() {
     this.loginService.consultarUsuario(this.loginForm.value).subscribe(resp => {
-        localStorage.setItem('logIn', resp[0].email);
-        this.router.navigateByUrl('/fabrica');
-  
+      localStorage.setItem('logIn', resp[0].email);
+      this.router.navigateByUrl('/fabrica');
     }
     );
   }

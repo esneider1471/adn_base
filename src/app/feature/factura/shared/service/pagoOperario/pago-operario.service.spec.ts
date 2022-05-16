@@ -1,7 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { Operacion } from '@fabrica/shared/model/operacion';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Operacion } from '@shared/model/operacion';
+import { Operario } from '@shared/model/operario';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
 import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
 import { AsignacionLote } from '@factura/shared/model/asignacionLote';
@@ -16,12 +16,12 @@ describe('PagoOperarioService', () => {
   let asignacionLoteService: AsignacionLoteService;
 
   const dummyAsignacion = [
-    new AsignacionLote(4, 'rf08', 14, 'op02','102614544'), 
-    new  AsignacionLote(5, 'rf08', 15, 'op03','1026156333')
+    new AsignacionLote(4, 'rf08', 14, 'op02', '102614544'),
+    new AsignacionLote(5, 'rf08', 15, 'op03', '1026156333')
   ];
   const dummyOperario = new Operario('o69', 'operario 1', '2222222', 'cra 66');
   const dummyOperaciones = [
-    new Operacion('op04', 'corte', 200), 
+    new Operacion('op04', 'corte', 200),
     new Operacion('0p05', 'pulido', 100)
   ];
 
@@ -52,12 +52,11 @@ describe('PagoOperarioService', () => {
 
   it('deberia listar pago operario', () => {
     service.consultarPagoOperario('o69');
-  /*   expect(service.operario.nombre).toEqual(dummyOperario.nombre);
-    expect(service.asignacionLote).toEqual(dummyAsignacion);
-    expect(service.asignacionLote.length).toEqual(1);
-
-    expect(service.operacion).toEqual(dummyOperaciones);
- */
+    /*   expect(service.operario.nombre).toEqual(dummyOperario.nombre);
+      expect(service.asignacionLote).toEqual(dummyAsignacion);
+      expect(service.asignacionLote.length).toEqual(1);
+      expect(service.operacion).toEqual(dummyOperaciones);
+   */
   });
 
 });

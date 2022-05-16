@@ -1,11 +1,9 @@
 import { browser, by, element, protractor } from 'protractor';
 
 export class OperarioPage {
-    /*  menu */
     private linkListarOperario = element(by.id('linkListarOperario'));
     private linkCrearOperario = element(by.id('linkCrearOperario'));
     private dropdownOperario = element(by.id('dropdownOperario'));
-    //campos
     private listaOperarios = element.all(by.id('idOperarios'));
     private idOperario = element(by.id('idOperario'));
     private nombre = element(by.id('nombre'));
@@ -19,7 +17,7 @@ export class OperarioPage {
         await this.linkListarOperario.click();
     }
 
-    async clickBotonCrearOperario(idOperario: string, nombre: string, telefono: string,direccion:string) {
+    async clickBotonCrearOperario(idOperario: string, nombre: string, telefono: string, direccion: string) {
         await this.dropdownOperario.click();
         browser.wait(this.condicion.presenceOf(this.linkCrearOperario), 10000);
         await this.linkCrearOperario.click();

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Lote } from '@fabrica/shared/model/lote';
-import { Operacion } from '@fabrica/shared/model/operacion';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Lote } from '@shared/model/lote';
+import { Operacion } from '@shared/model/operacion';
+import { Operario } from '@shared/model/operario';
 import { LoteService } from '@fabrica/shared/service/lote/lote.service';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
 import { OperarioService } from '@fabrica/shared/service/operario/operario.service';

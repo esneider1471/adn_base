@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Lote } from '@fabrica/shared/model/lote';
+import { Lote } from '@shared/model/lote';
 import { environment } from 'src/environments/environment';
 
 @Injectable()

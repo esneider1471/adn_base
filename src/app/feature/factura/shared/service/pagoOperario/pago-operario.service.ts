@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Operacion } from '@fabrica/shared/model/operacion';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Operacion } from '@shared/model/operacion';
+import { Operario } from '@shared/model/operario';
 import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
 import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
 import { AsignacionLote } from '@factura/shared/model/asignacionLote';
@@ -46,6 +46,4 @@ export class PagoOperarioService {
 
     return this.pagoOperario;
   }
-
-
 }

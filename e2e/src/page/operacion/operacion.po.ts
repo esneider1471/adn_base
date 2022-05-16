@@ -1,11 +1,9 @@
 import { browser, by, element, protractor } from 'protractor';
 
 export class OperacionPage {
-    /*  menu */
     private linkListarOperacion = element(by.id('linkListarOperacion'));
     private linkCrearOperacion = element(by.id('linkCrearOperacion'));
     private dropdownOperacion = element(by.id('dropdownOperacion'));
-    //campos
     private listaOperaciones = element.all(by.id('idOperaciones'));
     private idOperacion = element(by.id('idOperacion'));
     private nombreOperacion = element(by.id('nombreOperacion'));

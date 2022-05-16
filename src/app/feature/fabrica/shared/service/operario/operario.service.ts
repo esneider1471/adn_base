@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Operario } from '@fabrica/shared/model/operario';
+import { Operario } from '@shared/model/operario';
 import { environment } from 'src/environments/environment';
 
 @Injectable()
