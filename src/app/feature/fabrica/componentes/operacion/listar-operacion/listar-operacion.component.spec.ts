@@ -3,7 +3,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Operacion } from '@shared/model/operacion';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
 import { of } from 'rxjs';
 
 import { ListarOperacionComponent } from './listar-operacion.component';

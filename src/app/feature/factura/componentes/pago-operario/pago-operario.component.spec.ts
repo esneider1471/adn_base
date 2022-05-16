@@ -1,7 +1,7 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 import { Pago } from '@factura/shared/model/pagoOperario';
 import { AsignacionLoteService } from '@factura/shared/service/asignacionLote/asignacion-lote.service';
 import { PagoOperarioService } from '@factura/shared/service/pagoOperario/pago-operario.service';

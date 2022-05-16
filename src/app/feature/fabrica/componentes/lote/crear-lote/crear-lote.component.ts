@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { LoteService } from '@fabrica/shared/service/lote/lote.service';
+import { LoteService } from '@shared/service/lote/lote.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
 
 @Component({
   selector: 'app-crear-lote',
@@ -11,7 +12,8 @@ export class CrearLoteComponent implements OnInit {
 
   loteForm: FormGroup;
 
-  constructor(private loteService: LoteService) { }
+  constructor(private loteService: LoteService,
+              private mensajeService: MensajeService) { }
 
   ngOnInit() {
     this.construirFormularioLote();
@@ -20,7 +22,12 @@ export class CrearLoteComponent implements OnInit {
   crearLote() {
     this.loteService.crearLote(this.loteForm.value).subscribe(resp => {
       if (resp) {
-        this.loteForm.reset();
+        this.mensajeService.mostrarMensaje(
+          {
+            titulo: 'Su Registro Ha Sido Creado!',
+            mensaje: `Registro creado con exito`,
+            tipo: 2
+          }, 'fabrica/listar/lote');
       }
     }
     );

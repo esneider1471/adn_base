@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Operacion } from '@shared/model/operacion';
 import { Operario } from '@shared/model/operario';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 import { AsignacionLote } from '@factura/shared/model/asignacionLote';
 import { Pago } from '@factura/shared/model/pagoOperario';
 import { AsignacionLoteService } from '../asignacionLote/asignacion-lote.service';

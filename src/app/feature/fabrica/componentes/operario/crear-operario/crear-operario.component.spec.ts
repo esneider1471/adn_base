@@ -2,8 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 import { Operario } from '@shared/model/operario';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 import { of } from 'rxjs';
 
 import { CrearOperarioComponent } from './crear-operario.component';
@@ -21,9 +25,12 @@ describe('CrearOperarioComponent', () => {
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatDialogModule,
+        RouterTestingModule,
+        BrowserAnimationsModule
       ],
-      providers: [OperarioService]
+      providers: [OperarioService, MensajeService]
     })
       .compileComponents();
   });

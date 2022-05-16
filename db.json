@@ -69,6 +69,48 @@
       "fechaInicio": "2022-05-11",
       "fechaFin": "2022-05-19",
       "foto": "https://i.pinimg.com/736x/1a/30/ba/1a30bafc0af4e1000c49f63170645926.jpg"
+    },
+    {
+      "id": "FR78",
+      "cantidad": 1,
+      "fechaInicio": "2022-05-04",
+      "fechaFin": "2022-05-27",
+      "foto": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxATEhESEA8PDxAVFRUSFxUQEA8PDw8WFRIXFhUVFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGisdHR0tLSstLy03LSstKy0tMS0tLSstLy0tLSstLS0rKy0tLS0tLSstLS0tLS0tLSstLS0tK//AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABAECAwUGB//EAEYQAAIBAgIFBwcICQMFAAAAAAABAgMRBCEFBhIxUUFhcYGRobETIjJSssHRByNicpKiwvAkQlNzgpPS4fEVQ1QzNGOj4v/EABkBAQADAQEAAAAAAAAAAAAAAAABAwQCBf/EACURAQEAAgEDBAIDAQAAAAAAAAABAhEDBCEyEiIxUUFxE2GBQv/aAAwDAQACEQMRAD8A9xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADjPlB07VoeRp0Zyg3ec3H0lD0Y570r3eXqm605rJQwyak3Op+zhZy63uj1nnOktIzxFWVacVFtJKKzUIrJLn5e1mnp+K3L1WdlHNySTU+UzD6bxEl/wBxW/mz+JI/1PEft638yfxOUlF0pXi35N878x+r0cDotDaSoOlBVKVWU7yvKHk2vTk4+lJXyaXUbc8ZJuY7ZsLu6t0zvSWI/wCRW/m1PiX4HWatRq0/KVp1KTklNTe1aLdnJN5q2/qNXpDEJzm6alGF0op2TsopO6Ta3qRqMRO+V2+fi/gR6Jlj3nyeqy/L3VA4bVnXilsxo4lSpyhGMVV9KnUVrJu2cXxytznbUasZJShJSi804tNPoaPMywuN1W7HKZfC8AHLoAAAAAAAAAAAAAAAAAAAAAADntNa006UnTprytVZP1IPg3yvmXajrHG5XURllMZut5icTCnFzqTjCK3uTsjjtL62yneOG"
+    },
+    {
+      "id": "rf86",
+      "cantidad": 8,
+      "fechaInicio": "2022-05-12",
+      "fechaFin": "2022-05-22",
+      "foto": "https://i.pinimg.com/736x/1a/30/ba/1a30bafc0af4e1000c49f63170645926.jpg"
+    },
+    {
+      "id": "l51",
+      "cantidad": 51,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l97",
+      "cantidad": 97,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l66",
+      "cantidad": 66,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
+    },
+    {
+      "id": "l24",
+      "cantidad": 24,
+      "fechaInicio": "2020-10-02",
+      "fechaFin": "2021-10-03",
+      "foto": "url"
     }
   ],
   "operacion": [
@@ -91,6 +133,26 @@
       "id": "o89",
       "nombreOperacion": "pulida",
       "valorOperacionUnidad": 0
+    },
+    {
+      "id": "op744",
+      "nombreOperacion": "prueba",
+      "valorOperacionUnidad": 41
+    },
+    {
+      "id": "op83",
+      "nombreOperacion": "prueba83",
+      "valorOperacionUnidad": 83
+    },
+    {
+      "id": "op90",
+      "nombreOperacion": "prueba90",
+      "valorOperacionUnidad": 90
+    },
+    {
+      "id": "op9",
+      "nombreOperacion": "prueba9",
+      "valorOperacionUnidad": 9
     }
   ],
   "operario": [
@@ -117,6 +179,36 @@
       "nombre": "esteban",
       "telefono": "8877499",
       "direccion": "cra 34"
+    },
+    {
+      "id": "op785",
+      "nombre": "brayan",
+      "telefono": "4555555",
+      "direccion": "calle34"
+    },
+    {
+      "id": "o55",
+      "nombre": "operario55",
+      "telefono": "2229966",
+      "direccion": "cra 254"
+    },
+    {
+      "id": "o26",
+      "nombre": "operario26",
+      "telefono": "2229966",
+      "direccion": "cra 254"
+    },
+    {
+      "id": "o4",
+      "nombre": "operario4",
+      "telefono": "2229966",
+      "direccion": "cra 254"
+    },
+    {
+      "id": "o75",
+      "nombre": "operario75",
+      "telefono": "2229966",
+      "direccion": "cra 254"
     }
   ],
   "asignacionLote": [
@@ -147,6 +239,41 @@
       "cantidadPrendas": 12,
       "operacionId": "o89",
       "operarioId": "1244588"
+    },
+    {
+      "id": 34,
+      "referenciaLote": "l6",
+      "cantidadPrendas": 12,
+      "operacionId": "op28",
+      "operarioId": "102614544"
+    },
+    {
+      "id": 74,
+      "referenciaLote": "l6",
+      "cantidadPrendas": 74,
+      "operacionId": "op40",
+      "operarioId": "o69"
+    },
+    {
+      "id": 27,
+      "referenciaLote": "l6",
+      "cantidadPrendas": 27,
+      "operacionId": "op40",
+      "operarioId": "o69"
+    },
+    {
+      "id": 45,
+      "referenciaLote": "l6",
+      "cantidadPrendas": 45,
+      "operacionId": "op40",
+      "operarioId": "o69"
+    },
+    {
+      "id": 72,
+      "referenciaLote": "l6",
+      "cantidadPrendas": 72,
+      "operacionId": "op40",
+      "operarioId": "o69"
     }
   ],
   "login": [

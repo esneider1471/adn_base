@@ -3,10 +3,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Lote } from '@shared/model/lote';
 import { Operacion } from '@shared/model/operacion';
 import { Operario } from '@shared/model/operario';
-import { LoteService } from '@fabrica/shared/service/lote/lote.service';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { LoteService } from '@shared/service/lote/lote.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 import { AsignacionLoteService } from '@factura/shared/service/asignacionLote/asignacion-lote.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
 
 @Component({
   selector: 'app-crear-asignacion-lote',
@@ -23,7 +24,8 @@ export class CrearAsignacionLoteComponent implements OnInit {
   constructor(private asignacionLoteService: AsignacionLoteService,
               private loteService: LoteService,
               private operacionService: OperacionService,
-              private operarioSnervice: OperarioService) { }
+              private operarioSnervice: OperarioService,
+              private mensajeService: MensajeService) { }
 
   ngOnInit() {
     this.construirFormularioLote();
@@ -45,7 +47,12 @@ export class CrearAsignacionLoteComponent implements OnInit {
   crearAsignacionLote() {
     this.asignacionLoteService.crearAsignacionLote(this.asignacionLoteForm.value).subscribe(resp => {
       if (resp) {
-        this.asignacionLoteForm.reset();
+        this.mensajeService.mostrarMensaje(
+          {
+            titulo: 'Su Registro Ha Sido Creado!',
+            mensaje: `Registro creado con exito`,
+            tipo: 2
+          }, 'factura/listar/asignacionLote');
       }
     }
     );

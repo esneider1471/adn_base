@@ -7,18 +7,30 @@
 @import "assets/scss/partials/grids";
 @import "assets/scss/partials/global";
 @import "assets/scss/partials/buttons";
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-.margin-top{
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.margin-top {
     margin-top: 10px;
 }
 
-.margin-form{
+.margin-form {
     margin: 30px;
 }
 
-.titulo{
-font-size: 20px;
-margin-left: 30px !important;
+.titulo {
+    font-size: 20px;
+    margin-left: 30px !important;
+}
+
+.cantidad-error {
+    color: red;
 }

@@ -8,6 +8,7 @@ import { PagoOperarioService } from './shared/service/pagoOperario/pago-operario
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CrearAsignacionLoteComponent } from './componentes/asignacionLote/crear-asignacion-lote/crear-asignacion-lote.component';
 import { ListarAsignacionLoteComponent } from './componentes/asignacionLote/listar-asignacion-lote/listar-asignacion-lote.component';
+import { SharedModule } from '@shared/shared.module';
 
 
 
@@ -22,7 +23,8 @@ import { ListarAsignacionLoteComponent } from './componentes/asignacionLote/list
     CommonModule,
     FacturaRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [
     AsignacionLoteService,

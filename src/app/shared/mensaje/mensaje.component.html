@@ -1,0 +1,10 @@
+<div>
+    <span mat-dialog-title *ngIf="mensaje.tipo==1" style="color: red;">{{mensaje.titulo}}</span>
+    <span mat-dialog-title *ngIf="mensaje.tipo!=1" style="color: green;">{{mensaje.titulo}}</span>
+    <div mat-dialog-content>{{mensaje.mensaje}}</div>
+    <div style="margin-top:10px;">
+      <button type="button" *ngIf="mensaje.tipo==1" class="btn btn-danger form-control" (click)="cerrarMensaje()" >Cerrar</button>
+      <button type="button" *ngIf="mensaje.tipo!=1" class="btn btn-success form-control" (click)="cerrarMensaje()" >Cerrar</button>
+    </div>
+</div>
+

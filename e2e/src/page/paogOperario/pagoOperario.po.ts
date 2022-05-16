@@ -5,6 +5,7 @@ export class PagoOperarioPage {
     private dropdownPagaroperario = element(by.id('dropdownPagaroperario'));
     private inputIdOperario = element(by.id('inputIdOperario'));
     private btnConsultarOperario = element(by.id('btnConsultarOperario'));
+    private listaPagoOperarios = element.all(by.id('idPagoOperarios'));
     private condicion = protractor.ExpectedConditions;
 
     async clickBotonListarPagoOperario() {
@@ -17,6 +18,10 @@ export class PagoOperarioPage {
         await this.inputIdOperario.sendKeys(idOperario);
         await this.btnConsultarOperario.click();
         browser.sleep(5000);
+    }
+
+    async contarPagoOperarios() {
+        return this.listaPagoOperarios.count();
     }
 
 }

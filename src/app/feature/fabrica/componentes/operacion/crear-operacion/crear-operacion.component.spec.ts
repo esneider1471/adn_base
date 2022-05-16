@@ -2,8 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterTestingModule } from '@angular/router/testing';
 import { Operacion } from '@shared/model/operacion';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
 import { of } from 'rxjs';
 
 import { CrearOperacionComponent } from './crear-operacion.component';
@@ -21,9 +25,12 @@ describe('CrearOperacionComponent', () => {
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatDialogModule,
+        RouterTestingModule,
+        BrowserAnimationsModule
       ],
-      providers: [OperacionService]
+      providers: [OperacionService, MensajeService]
     })
       .compileComponents();
   }));

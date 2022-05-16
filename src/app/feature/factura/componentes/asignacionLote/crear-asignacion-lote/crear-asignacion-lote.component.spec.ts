@@ -5,14 +5,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Lote } from '@shared/model/lote';
 import { Operacion } from '@shared/model/operacion';
 import { Operario } from '@shared/model/operario';
-import { LoteService } from '@fabrica/shared/service/lote/lote.service';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { LoteService } from '@shared/service/lote/lote.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 import { AsignacionLote } from '@factura/shared/model/asignacionLote';
 import { AsignacionLoteService } from '@factura/shared/service/asignacionLote/asignacion-lote.service';
 import { of } from 'rxjs';
 
 import { CrearAsignacionLoteComponent } from './crear-asignacion-lote.component';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
+import { MatDialogModule } from '@angular/material/dialog';
+import { RouterTestingModule } from '@angular/router/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('CrearAsignacionLoteComponent', () => {
   let component: CrearAsignacionLoteComponent;
@@ -40,9 +44,12 @@ describe('CrearAsignacionLoteComponent', () => {
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatDialogModule,
+        RouterTestingModule,
+        BrowserAnimationsModule
       ],
-      providers: [AsignacionLoteService, LoteService, OperacionService, OperarioService]
+      providers: [AsignacionLoteService, LoteService, OperacionService, OperarioService, MensajeService]
     })
       .compileComponents();
   });

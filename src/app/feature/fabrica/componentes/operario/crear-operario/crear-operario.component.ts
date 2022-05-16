@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 
 @Component({
   selector: 'app-crear-operario',
@@ -11,7 +12,8 @@ export class CrearOperarioComponent implements OnInit {
 
   operarioForm: FormGroup;
 
-  constructor(private operacrioService: OperarioService) { }
+  constructor(private operacrioService: OperarioService,
+              private mensajeService: MensajeService) { }
 
   ngOnInit() {
     this.construirFormularioOperario();
@@ -20,7 +22,12 @@ export class CrearOperarioComponent implements OnInit {
   crearOperario() {
     this.operacrioService.crearOperario(this.operarioForm.value).subscribe(resp => {
       if (resp) {
-        this.operarioForm.reset();
+        this.mensajeService.mostrarMensaje(
+          {
+            titulo: 'Su Registro Ha Sido Creado!',
+            mensaje: `Registro creado con exito`,
+            tipo: 2
+          }, 'fabrica/listar/operario');
       }
     }
     );

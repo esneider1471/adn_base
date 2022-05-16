@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Operacion } from '@shared/model/operacion';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
 
 @Component({
   selector: 'app-listar-operacion',

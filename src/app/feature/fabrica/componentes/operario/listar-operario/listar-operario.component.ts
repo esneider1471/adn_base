@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Operario } from '@shared/model/operario';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 
 @Component({
   selector: 'app-listar-operario',

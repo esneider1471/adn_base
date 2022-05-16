@@ -5,13 +5,11 @@ import { CrearLoteComponent } from './componentes/lote/crear-lote/crear-lote.com
 import { CrearOperacionComponent } from './componentes/operacion/crear-operacion/crear-operacion.component';
 import { CrearOperarioComponent } from './componentes/operario/crear-operario/crear-operario.component';
 import { FabricaRoutingModule } from './fabrica-routing.module';
-import { LoteService } from './shared/service/lote/lote.service';
-import { OperacionService } from './shared/service/operacion/operacion.service';
-import { OperarioService } from './shared/service/operario/operario.service';
 import { ListarLoteComponent } from './componentes/lote/listar-lote/listar-lote.component';
 import { ListarOperacionComponent } from './componentes/operacion/listar-operacion/listar-operacion.component';
 import { ListarOperarioComponent } from './componentes/operario/listar-operario/listar-operario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,13 +22,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ListarOperarioComponent
   ],
   imports: [
+    CommonModule,
     FabricaRoutingModule,
     SharedModule,
     FormsModule,
     ReactiveFormsModule
-  ],
-  providers: [LoteService,
-    OperacionService,
-    OperarioService]
+  ]
 })
 export class FabricaModule { }

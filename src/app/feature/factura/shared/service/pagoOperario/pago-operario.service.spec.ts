@@ -2,8 +2,8 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { Operacion } from '@shared/model/operacion';
 import { Operario } from '@shared/model/operario';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
-import { OperarioService } from '@fabrica/shared/service/operario/operario.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
+import { OperarioService } from '@shared/service/operario/operario.service';
 import { AsignacionLote } from '@factura/shared/model/asignacionLote';
 import { AsignacionLoteService } from '../asignacionLote/asignacion-lote.service';
 

@@ -15,6 +15,7 @@
                     <label>cantidad</label>
                     <input validar type="number" id="cantidadLote" name="cantidadLote" placeholder="Cantidad lote" class="form-control"
                         formControlName="cantidad">
+                        <span class="cantidad-error" *ngIf="!loteForm.controls.cantidad.errors && loteForm.controls.cantidad.value < 1" >La cantidad ingresada debe ser mayor a 0</span>
                 </div>
             </div>
             <div class="row margin-top">
@@ -40,7 +41,7 @@
             </div>
             <div class="row margin-top">
                 <div class="col-sm-12">
-                    <button id="btnCrearLote" [disabled]="loteForm.controls.id.errors || loteForm.controls.cantidad.errors
+                    <button id="btnCrearLote" [disabled]="loteForm.controls.id.errors || loteForm.controls.cantidad.errors || loteForm.controls.cantidad.value < 1
                     || loteForm.controls.fechaInicio.errors || loteForm.controls.fechaFin.errors || loteForm.controls.foto.errors" class="btn btn-primary form-control"  (click)="crearLote()">Crear</button>
                 </div>
               </div>

@@ -8,6 +8,11 @@ import { ErrorCamposPlantillaComponent } from './directivas/error-campos/compone
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TrackByPipe } from './pipe/track-by.pipe';
 import { FotoComponent } from './foto/foto.component';
+import { LoteService } from './service/lote/lote.service';
+import { OperacionService } from './service/operacion/operacion.service';
+import { OperarioService } from './service/operario/operario.service';
+import { MensajeService } from './service/mensaje/mensaje.service';
+import { MensajeComponent } from './mensaje/mensaje.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +21,11 @@ import { FotoComponent } from './foto/foto.component';
     MensajeErrorCamposContenedorDirective,
     MensajeErrorCamposSubmitDirective,
     TrackByPipe,
-    FotoComponent
+    FotoComponent,
+    MensajeComponent
   ],
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   exports: [
-    CommonModule,
     HttpClientModule,
     MensajeErrorCamposDirective,
     MensajeErrorCamposContenedorDirective,
@@ -28,7 +33,12 @@ import { FotoComponent } from './foto/foto.component';
     ReactiveFormsModule,
     FormsModule,
     TrackByPipe,
-    FotoComponent
-  ]
+    FotoComponent,
+    MensajeComponent
+  ],
+  providers: [LoteService,
+    OperacionService,
+    OperarioService,
+    MensajeService]
 })
 export class SharedModule { }

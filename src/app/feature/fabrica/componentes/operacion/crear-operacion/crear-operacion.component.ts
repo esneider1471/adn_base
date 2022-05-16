@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { OperacionService } from '@fabrica/shared/service/operacion/operacion.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
+import { OperacionService } from '@shared/service/operacion/operacion.service';
 
 @Component({
   selector: 'app-crear-operacion',
@@ -11,7 +12,8 @@ export class CrearOperacionComponent implements OnInit {
 
   operacionForm: FormGroup;
 
-  constructor(private operacionService: OperacionService) { }
+  constructor(private operacionService: OperacionService,
+              private mensajeService: MensajeService) { }
 
   ngOnInit() {
     this.construirFormularioLOperacion();
@@ -20,7 +22,12 @@ export class CrearOperacionComponent implements OnInit {
   crearOperacion() {
     this.operacionService.crearOperacion(this.operacionForm.value).subscribe(resp => {
       if (resp) {
-        this.operacionForm.reset();
+        this.mensajeService.mostrarMensaje(
+          {
+            titulo: 'Su Registro Ha Sido Creado!',
+            mensaje: `Registro creado con exito`,
+            tipo: 2
+          }, 'fabrica/listar/operacion');
       }
     }
     );

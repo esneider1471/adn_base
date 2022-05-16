@@ -2,8 +2,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatDialogModule } from '@angular/material/dialog';
+import { RouterTestingModule } from '@angular/router/testing';
 import { Lote } from '@shared/model/lote';
-import { LoteService } from '@fabrica/shared/service/lote/lote.service';
+import { LoteService } from '@shared/service/lote/lote.service';
+import { MensajeService } from '@shared/service/mensaje/mensaje.service';
 import { of } from 'rxjs';
 
 import { CrearLoteComponent } from './crear-lote.component';
@@ -23,9 +26,11 @@ describe('CrearLoteComponent', () => {
         CommonModule,
         ReactiveFormsModule,
         FormsModule,
-        HttpClientTestingModule
+        HttpClientTestingModule,
+        MatDialogModule,
+        RouterTestingModule
       ],
-      providers: [LoteService]
+      providers: [LoteService, MensajeService]
     })
       .compileComponents();
   });

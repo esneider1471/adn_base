@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Lote } from '@shared/model/lote';
-import { LoteService } from '@fabrica/shared/service/lote/lote.service';
+import { LoteService } from '@shared/service/lote/lote.service';
 
 @Component({
   selector: 'app-listar-lote',

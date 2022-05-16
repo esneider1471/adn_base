@@ -20,12 +20,13 @@
             <label>Valor de Operacion por unidad</label>
             <input validar type="number" id="valorOperacionUnidad" name="valorOperacionUnidad" placeholder="100"
                 class="form-control" formControlName="valorOperacionUnidad">
+                <span class="cantidad-error" *ngIf="!operacionForm.controls.valorOperacionUnidad.errors && operacionForm.controls.valorOperacionUnidad.value < 1" >El valor de la operacion debe ser mayor a 0</span>
         </div>
     </div>
     <div class="row margin-top">
         <div class="col-sm-4">
             <button id="btnCrearOperacion" [disabled]="operacionForm.controls.id.errors || operacionForm.controls.nombreOperacion.errors
-            || operacionForm.controls.valorOperacionUnidad.errors" class="btn btn-primary form-control"  (click)="crearOperacion()">Crear</button>
+            || operacionForm.controls.valorOperacionUnidad.value < 1 || operacionForm.controls.valorOperacionUnidad.errors" class="btn btn-primary form-control"  (click)="crearOperacion()">Crear</button>
         </div>
       </div>
 
